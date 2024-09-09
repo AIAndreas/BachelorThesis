@@ -173,6 +173,7 @@ def main():
 
 
             # compute original gradient
+            print(gt_data.shape, gt_label.shape)
             out = net(gt_data)
             y = criterion(out, gt_label)
             dy_dx = torch.autograd.grad(y, net.parameters())
