@@ -1,3 +1,4 @@
-.png
-.wav
-.npy
+*.wav
+*.png
+*.npy
+data/
