@@ -8,6 +8,7 @@ from torch.utils.data import Dataset
 from torchvision import datasets, transforms
 import pickle
 import PIL.Image as Image
+import tensorflow as tf
 
 
 class LeNet(nn.Module):
@@ -30,7 +31,7 @@ class LeNet(nn.Module):
         out = self.body(x)
         out = out.view(out.size(0), -1)
         out = self.fc(out)
-        return out
+        return out  
 
 
 def weights_init(m):
@@ -65,6 +66,22 @@ class Dataset_from_Image(Dataset):
         return img, lab
 
 
+class Dataset_from_Spectrogram(Dataset):
+    def __init__(self, imgs, labs, transform=None):
+        self.imgs = imgs # img paths
+        self.labs = labs # labs is ndarray
+        self.transform = transform
+        del imgs, labs
+
+    def __len__(self):
+        return self.labs.shape[0]
+
+    def __getitem__(self, idx):
+        lab = self.labs[idx]
+        spec = np.load(self.imgs[idx])
+        spec = np.expand_dims(spec, axis=0)
+        return spec, lab
+
 def lfw_dataset(lfw_path, shape_img):
     images_all = []
     labels_all = []
@@ -75,14 +92,25 @@ def lfw_dataset(lfw_path, shape_img):
             if len(f) > 4 and f[-4:] == '.jpg':
                 images_all.append(os.path.join(lfw_path, fold, f))
                 labels_all.append(foldidx)
+    
 
     transform = transforms.Compose([transforms.Resize(size=shape_img)])
     dst = Dataset_from_Image(images_all, np.asarray(labels_all, dtype=int), transform=transform)
     return dst
 
+def audio_mnist_dataset(data_path, shape_img):
+    images_all = []
+    labels_all = []
+    files = os.listdir(data_path)
+    for f in files:
+        if f[-4:] == '.npy':
+            images_all.append(os.path.join(data_path, f))
+            labels_all.append(f[0])
+    dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
+    return dst
 
 def main():
-    dataset = 'lfw'
+    dataset = 'audio_mnist'
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
@@ -95,8 +123,7 @@ def main():
     use_cuda = torch.cuda.is_available()
     device = 'cuda' if use_cuda else 'cpu'
 
-    tt = transforms.Compose([transforms.ToTensor()])
-    tp = transforms.Compose([transforms.ToPILImage()])
+    # tp = transforms.Compose([transforms.ToPILImage()])
 
     print(dataset, 'root_path:', root_path)
     print(dataset, 'data_path:', data_path)
@@ -115,7 +142,7 @@ def main():
         num_classes = 10
         channel = 1
         hidden = 588
-        dst = datasets.MNIST(data_path, download=False)
+        dst = datasets.MNIST(data_path, download=True)
 
     elif dataset == 'cifar100':
         shape_img = (32, 32)
@@ -130,11 +157,17 @@ def main():
         num_classes = 5749
         channel = 3
         hidden = 768
-        if root_path:
-            print('hey')
-            print(root_path)
         lfw_path = os.path.join(root_path, 'data/lfw')
         dst = lfw_dataset(lfw_path, shape_img)
+
+    elif dataset == 'audio_mnist':
+        shape_img = (129, 63)
+        num_classes = 10
+        channel = 1
+        hidden = 6336
+        data_path = os.path.join(root_path, 'data/audioMNIST/data_spec')
+        dst = audio_mnist_dataset(data_path, shape_img)
+        
 
     else:
         exit('unknown dataset')
@@ -160,10 +193,11 @@ def main():
             for imidx in range(num_dummy):
                 idx = idx_shuffle[imidx]
                 imidx_list.append(idx)
-                tmp_datum = tt(dst[idx][0]).float().to(device)
+                tmp_datum = torch.from_numpy(dst[idx][0]).float().to(device)
                 tmp_datum = tmp_datum.view(1, *tmp_datum.size())
                 tmp_label = torch.Tensor([dst[idx][1]]).long().to(device)
                 tmp_label = tmp_label.view(1, )
+                print(tmp_datum.shape, tmp_label)
                 if imidx == 0:
                     gt_data = tmp_datum
                     gt_label = tmp_label
@@ -175,7 +209,7 @@ def main():
             # compute original gradient
             print(gt_data.shape, gt_label.shape)
             out = net(gt_data)
-            print(out.shape)
+            print(out)
             y = criterion(out, gt_label)
             dy_dx = torch.autograd.grad(y, net.parameters())
             original_dy_dx = list((_.detach().clone() for _ in dy_dx))
@@ -183,7 +217,7 @@ def main():
             # generate dummy data and label
             dummy_data = torch.randn(gt_data.size()).to(device).requires_grad_(True)
             dummy_label = torch.randn((gt_data.shape[0], num_classes)).to(device).requires_grad_(True)
-
+            print(dummy_data)
             if method == 'DLG':
                 optimizer = torch.optim.LBFGS([dummy_data, dummy_label], lr=lr)
             elif method == 'iDLG':
@@ -208,7 +242,7 @@ def main():
                         # dummy_loss = criterion(pred, gt_label)
                     elif method == 'iDLG':
                         dummy_loss = criterion(pred, label_pred)
-
+        
                     dummy_dy_dx = torch.autograd.grad(dummy_loss, net.parameters(), create_graph=True)
 
                     grad_diff = 0
@@ -227,24 +261,25 @@ def main():
                 if iters % int(Iteration / 30) == 0:
                     current_time = str(time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()))
                     print(current_time, iters, 'loss = %.8f, mse = %.8f' %(current_loss, mses[-1]))
-                    history.append([tp(dummy_data[imidx].cpu()) for imidx in range(num_dummy)])
+                    history.append([dummy_data[imidx].cpu() for imidx in range(num_dummy)])
                     history_iters.append(iters)
-                    print(history)
-                    for imidx in range(num_dummy):
-                        plt.figure(figsize=(12, 8))
-                        plt.subplot(3, 10, 1)
-                        plt.imshow(tp(gt_data[imidx].cpu()))
-                        for i in range(min(len(history), 29)):
-                            plt.subplot(3, 10, i + 2)
-                            plt.imshow(history[i][imidx])
-                            plt.title('iter=%d' % (history_iters[i]))
-                            plt.axis('off')
-                        if method == 'DLG':
-                            plt.savefig('%s/DLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
-                            plt.close()
-                        elif method == 'iDLG':
-                            plt.savefig('%s/iDLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
-                            plt.close()
+                    # print(history)
+                    # for imidx in range(num_dummy):
+                    #     plt.figure(figsize=(12, 8))
+                    #     plt.subplot(3, 10, 1)
+                    #     plt.imshow(gt_data[imidx][0].cpu(), cmap='gray')
+                    #     for i in range(min(len(history), 29)):
+                    #         plt.subplot(3, 10, i + 2)
+                    #         # print(history[i][imidx])
+                    #         plt.imshow(history[i][imidx])
+                    #         plt.title('iter=%d' % (history_iters[i]))
+                    #         plt.axis('off')
+                    #     if method == 'DLG':
+                    #         plt.savefig('%s/DLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
+                    #         plt.close()
+                    #     elif method == 'iDLG':
+                    #         plt.savefig('%s/iDLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
+                    #         plt.close()
 
                     if current_loss < 0.000001: # converge
                         break
