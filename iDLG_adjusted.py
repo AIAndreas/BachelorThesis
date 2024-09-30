@@ -10,6 +10,7 @@ import pickle
 import PIL.Image as Image
 import tensorflow as tf
 from torch.utils.data import DataLoader
+import math
 
 
 class LeNet(nn.Module):
@@ -18,13 +19,16 @@ class LeNet(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 65, 32]),
+            nn.LayerNorm([12, 65, 26]),
+            # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 33, 16]),
+            nn.LayerNorm([12, 33, 13]),
+            # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
-            nn.LayerNorm([12, 33, 16]),
+            nn.LayerNorm([12, 33, 13]),
+            # nn.BatchNorm2d(12),
             act(),
         )
         self.fc = nn.Sequential(
@@ -181,20 +185,30 @@ def audio_mnist_dataset(data_path, shape_img):
     
     return images_all, labels_all
 
+
+def adjust_learning_rate(optimizer, its, warmup_iterations=10):
+    if its < warmup_iterations:
+        lr = 1e-5 # Increase LR over warmup epochs
+        for param_group in optimizer.param_groups:
+            param_group['lr'] = lr
+    else:
+        lr = 1e-2
+        for param_group in optimizer.param_groups:
+            param_group['lr'] = lr
 def main():
     dataset = 'audio_mnist'
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
     
-    lr = 0.1
+    lr = 0.01
     num_dummy = 1
-    Iteration = 100
-    num_exp = 10
+    Iteration = 20
+    num_exp = 20
 
     use_cuda = torch.cuda.is_available()
-    device = 'cuda' if use_cuda else 'cpu'
-
+    #device = 'cuda' if use_cuda else 'cpu'
+    device = 'cpu'
     # tp = transforms.Compose([transforms.ToPILImage()])
 
     print(dataset, 'root_path:', root_path)
@@ -233,10 +247,10 @@ def main():
         dst = lfw_dataset(lfw_path, shape_img)
 
     elif dataset == 'audio_mnist':
-        shape_img = (129, 63)
+        shape_img = (129, 51)
         num_classes = 10
         channel = 1
-        hidden = 6336
+        hidden = 5148
         data_path = os.path.join(root_path, 'data/audioMNIST/data_spec')
         images_all, labels_all = audio_mnist_dataset(data_path, shape_img)
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
@@ -310,13 +324,14 @@ def main():
             print('lr =', lr)
             for iters in range(Iteration):
                 
-
+                adjust_learning_rate(optimizer, iters)
                 
                 dummy_data_log = dummy_data
                 if iters % int(Iteration / 20) == 0:
                     history.append([dummy_data_log[imidx].clone().detach().cpu().numpy() for imidx in range(num_dummy)])
                     # print(dummy_data[imidx].cpu())
                     history_iters.append(iters)
+                    
 
                 
 
@@ -340,15 +355,23 @@ def main():
                     grad_diff.backward()
                     
                     return grad_diff
-
                 optimizer.step(closure)
                 current_loss = closure().item()
                 train_iters.append(iters)
                 losses.append(current_loss)
                 mses.append(torch.mean((dummy_data-gt_data)**2).item())
-                current_time = str(time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()))
-                print(current_time, iters, 'loss = %.8f, mse = %.8f' %(current_loss, mses[-1]))
-                    
+
+                # if math.isnan(current_loss): 
+                #     for name, param in net.named_parameters():
+                #         if param.grad is not None:
+                #             print(f"Layer: {name}, Gradient: {param.grad.norm()}")
+                #         else:
+                #             print(f"Layer: {name} has no gradient")
+                #     continue
+
+                if iters % int(Iteration / 20) == 0:
+                    current_time = str(time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()))
+                    print(current_time, iters, 'loss = %.8f, mse = %.8f' %(current_loss, mses[-1]))
 
 
                 if current_loss < 0.000001 and mses[-1] < 1: # converge
