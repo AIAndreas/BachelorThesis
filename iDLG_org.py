@@ -1,5 +1,9 @@
 import time
 import os
+
+# Set environment variable before importing numpy
+os.environ['MKL_ENABLE_INSTRUCTIONS'] = 'SSE4_2'
+
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
@@ -8,6 +12,10 @@ from torch.utils.data import Dataset
 from torchvision import datasets, transforms
 import pickle
 import PIL.Image as Image
+import warnings
+
+# Suppress UserWarnings from NumPy
+warnings.filterwarnings("ignore", category=UserWarning, module='numpy')
 
 
 class LeNet(nn.Module):
@@ -82,7 +90,7 @@ def lfw_dataset(lfw_path, shape_img):
 
 
 def main():
-    dataset = 'cifar100'
+    dataset = 'lfw'
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
@@ -90,7 +98,7 @@ def main():
     lr = 1.0
     num_dummy = 1
     Iteration = 300
-    num_exp = 1000
+    num_exp = 1
 
     use_cuda = torch.cuda.is_available()
     device = 'cuda' if use_cuda else 'cpu'
@@ -122,7 +130,7 @@ def main():
         num_classes = 100
         channel = 3
         hidden = 768
-        dst = datasets.CIFAR100(data_path, download=True)
+        dst = datasets.CIFAR100(data_path, download=False)
 
 
     elif dataset == 'lfw':
@@ -138,7 +146,6 @@ def main():
 
     else:
         exit('unknown dataset')
-
 
 
 
@@ -160,6 +167,7 @@ def main():
             for imidx in range(num_dummy):
                 idx = idx_shuffle[imidx]
                 imidx_list.append(idx)
+                print(dst[idx][0])
                 tmp_datum = tt(dst[idx][0]).float().to(device)
                 tmp_datum = tmp_datum.view(1, *tmp_datum.size())
                 tmp_label = torch.Tensor([dst[idx][1]]).long().to(device)

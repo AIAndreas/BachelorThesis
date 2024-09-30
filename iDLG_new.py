@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 from torchvision import datasets, transforms
 import pickle
 import PIL.Image as Image
-
+import sys  # Import sys for redirecting output
 
 class LeNet(nn.Module):
     def __init__(self, channel=3, hideen=768, num_classes=10):
@@ -32,7 +32,6 @@ class LeNet(nn.Module):
         out = self.fc(out)
         return out
 
-
 def weights_init(m):
     try:
         if hasattr(m, "weight"):
@@ -44,7 +43,6 @@ def weights_init(m):
             m.bias.data.uniform_(-0.5, 0.5)
     except Exception:
         print('warning: failed in weights_init for %s.bias' % m._get_name())
-
 
 class Dataset_from_Image(Dataset):
     def __init__(self, imgs, labs, transform=None):
@@ -64,7 +62,6 @@ class Dataset_from_Image(Dataset):
         img = self.transform(img)
         return img, lab
 
-
 def lfw_dataset(lfw_path, shape_img):
     images_all = []
     labels_all = []
@@ -80,8 +77,10 @@ def lfw_dataset(lfw_path, shape_img):
     dst = Dataset_from_Image(images_all, np.asarray(labels_all, dtype=int), transform=transform)
     return dst
 
-
 def main():
+    # Redirect stdout to a file
+    sys.stdout = open("output.txt", "w")
+
     dataset = 'cifar100'
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
@@ -242,6 +241,9 @@ def main():
 
         except (ValueError, RuntimeError, Exception) as e:
             print(f"Skipping experiment due to error: {e}")
+
+    # Close the output file
+    sys.stdout.close()
 
 if __name__ == '__main__':
     main()

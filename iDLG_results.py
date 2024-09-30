@@ -1,11 +1,14 @@
 
-
+import re
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Open and read the file
-with open("Output_error/Output_22780760.out", "r") as file:
+with open("Output_error/output_cifar100_exp1000.txt", "r") as file:
     content = file.read()
 
 num_exp = 1000
+dataset = "CIFAR100"
 
 #cut first part of output 
 content = content[content.find(f"running 0|{num_exp} experiment"):]
@@ -27,15 +30,22 @@ dlg_acc = 0
 idlg_acc = 0 
 
 for i in range(0,num_exp):
-    gt_label = parts[i].find("gt_label:")
-    gt_label_exp = parts[i][gt_label+11]
+
     gt_label_count += 1
 
-    if parts[i][gt_label+23] == gt_label_exp:
-        dlg_acc += 1
+    gt_label = parts[i].find("gt_label:")
+    end = parts[i].find("lab_iDLG") #+12
+    line = parts[i][gt_label:end+12]
+
+    # Split the line by whitespace or newlines
+    line = re.split(r"[ \n\[\]]+", line)
+    if line[3] == line[1]:
+        dlg_acc += 1 
     
-    if parts[i][gt_label+35] == gt_label_exp:
+    if line[5] == line[1]:
         idlg_acc += 1
+        
+
 
 
 print("Number of correct labels for dlg: ", dlg_acc, ". Accuracy (%): ", (dlg_acc/num_exp)*100)
@@ -46,13 +56,7 @@ print("Number of correct labels for idlg: ", idlg_acc, ". Accuracy (%): ", (idlg
 #idlg_label = 739 (+35
 
 
-
-
 ##MSE
-
-import re
-import numpy as np
-import matplotlib.pyplot as plt
 
 # Initialize lists to store the MSE values
 mse_DLG = []
@@ -158,43 +162,45 @@ print(fidelity_count_DLG)
 print(fidelity_count_iDLG)
 
 
+import matplotlib.pyplot as plt
+
 # Define thresholds (in decreasing order)
 thresholds = [0.01, 0.005, 0.001, 0.0005, 0.0001]  # Corresponding thresholds
 
-# Convert fidelity counts to percentages
+# Fidelity percentages (already computed)
 fidelity_percentage_DLG = [f * 100 for f in fidelity_count_DLG]
 fidelity_percentage_iDLG = [f * 100 for f in fidelity_count_iDLG]
 
-# Create the plot
-plt.figure(figsize=(10, 6))
 
-# Plot with decreasing thresholds
-plt.plot(thresholds, fidelity_percentage_DLG, marker='o', linestyle='-', color='blue', label='DLG Fidelity')
-plt.plot(thresholds, fidelity_percentage_iDLG, marker='o', linestyle='-', color='orange', label='iDLG Fidelity')
+# Plotting
+plt.figure(figsize=(8, 6))
 
-# Invert the x-axis to represent decreasing threshold values
-plt.gca().invert_xaxis()
+# DLG - blue line with circular markers
+plt.plot(thresholds, fidelity_percentage_DLG, marker='o', color='blue', label='DLG', linestyle='-', markersize=8)
 
-# Set custom x-ticks for clearer spacing
-plt.xticks(thresholds)
+# iDLG - red line with star markers
+plt.plot(thresholds, fidelity_percentage_iDLG, marker='*', color='red', label='iDLG', linestyle='-', markersize=10)
 
-# Set custom y-ticks for percentages
-percentage = [0, 25, 50, 75, 100]
-plt.yticks(percentage)
+# Title and labels
+plt.title(dataset, fontsize=16)
+plt.xlabel('Fidelity Threshold (MSE)', fontsize=12)
+plt.ylabel('% of Good Fidelity', fontsize=12)
 
-# Disable minor ticks
-plt.minorticks_off()
+# Set x-axis to log scale to match the target plot and reverse the axis direction
+plt.xscale('log')
+plt.gca().invert_xaxis()  # Reverse the x-axis
 
-# Labels and title
-plt.title('Fidelity Comparison for DLG and iDLG')
-plt.xlabel('Threshold')
-plt.ylabel('Fidelity (%)')
-plt.grid(True, which="both", linestyle='--', linewidth=0.5)
+# Customize the ticks on the x-axis to match the target plot (show exact thresholds instead of scientific notation)
+plt.xticks([0.01, 0.005, 0.001, 0.0005, 0.0001], ['0.01', '0.005', '0.001', '0.0005', '0.0001'])
+
+# Set y-axis limits from 0 to 100
+plt.ylim(0, 100)
+
+# Gridlines (optional, you can modify the linewidth if needed)
+plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+
+# Legend
 plt.legend()
-plt.ylim(0, 100)  # Set y-axis limits from 0 to 100%
 
-# Adjust x-axis limits to provide more space on the right side
-plt.xlim(0.011, 0.00005)  # Extend the limits a bit on both sides
-
-# Show the plot
+# Show plot
 #plt.show()
