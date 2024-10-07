@@ -8,7 +8,7 @@ num_exp = 1000
 dataset = "LFW"
 
 if dataset == "LFW":
-    with open('output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
+    with open('Output_error/output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
         content = file.read()
 
 else:
@@ -103,6 +103,7 @@ for i in range(num_exp):
 #print("inf dlg:", count_dlg_inf)
 #print("inf idlg:", count_idlg_inf)
 
+#print(mse_iDLG)
 
 fidelity_count_DLG = []
 fidelity_count_iDLG = []
@@ -213,7 +214,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend(fontsize=15)
 
 # Show plot
-#plt.show()
+plt.show()
 
 
 
