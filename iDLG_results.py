@@ -8,20 +8,25 @@ num_exp = 1000
 dataset = "LFW"
 
 
+
 """
 if dataset == "LFW":
     with open('Output_error/output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
+
+if dataset == "LFW":
+    with open('output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
+
         content = file.read()
 
 else:
     # Open and read the file
     with open("Output_error/output_lfw_exp1000.txt", "r") as file:
         content = file.read()
+
 """
 
 with open("Output_error/output_lfw_exp544_utf8_done.txt", "r") as file:
     content = file.read()
-
 
 
 #cut first part of output 
@@ -33,10 +38,12 @@ content = content[content.find(f"running 0|{num_exp} experiment"):]
 # Adjust this if there's a more specific marker
 parts = content.split('----------------------')
 
+print(parts[0])
+
 #remove empty last element
 parts = parts[:-1]
 
-print(len(parts))
+
 ## LABEL ACCURACY 
 
 #count number of correct answers
@@ -224,69 +231,3 @@ plt.legend(fontsize=15)
 
 
 
-##Statistical comparison of label prediction accuracy 
-from statsmodels.stats.contingency_tables import mcnemar
-
-# Suppose you have these contingency table values
-# [A] : Count where both DLG and iDLG are correct
-# [B] : Count where DLG is correct but iDLG is incorrect
-# [C] : Count where DLG is incorrect but iDLG is correct
-# [D] : Count where both DLG and iDLG are incorrect
-
-A = 0
-B = 0
-C = 0
-D = 0 
-
-for i in range(0,num_exp):
-    gt_label = parts[i].find("gt_label:")
-    end = parts[i].find("lab_iDLG") #+12
-    line = parts[i][gt_label:end+15]
-
-    # Split the line by whitespace or newlines
-    line = re.split(r"[ \n\[\]]+", line)
-    if line[3] == line[1] and line[5] == line[1]:
-        A += 1
-    
-    if line[3] == line[1] and line[5] != line[1]:
-        B += 1
-
-    if line[5] == line[1] and line[3] != line[1]:
-        C += 1
-
-    if line[3] != line[1] and line[5] != line[1]:
-        D += 1
-
-
-print(A)
-print(B)
-print(C)
-print(D)
-
-contingency_table = [[A, B], [C, D]]
-
-print(contingency_table)
-
-result = mcnemar(contingency_table, exact=True)
-print(result.pvalue)
-
-#Statistical comparison of reproduced and original results
-
-"""
-MNIST_OG = 0.899
-CIFAR_OG = 0.833
-LFW_OG = 0.791 
-
-MNIST_reprod = 0.849
-CIFAR_reprod = 0.905
-LFW_reprod = 0.0 
-
-#z_test 
-
-p_mnist = (899+849)/2000
-p_cifar = (833+905)/2000
-
-z_mnist = ((0.899-0.849)-0)/(np.sqrt(p_mnist*(1-p_mnist)*((1/1000)+(1/1000))))
-
-print(z_mnist)
-"""
