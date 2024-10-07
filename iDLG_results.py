@@ -3,12 +3,19 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Open and read the file
-with open("Output_error/output_cifar100_exp1000.txt", "r") as file:
-    content = file.read()
 
 num_exp = 1000
-dataset = "CIFAR100"
+dataset = "LFW"
+
+if dataset == "LFW":
+    with open('output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
+        content = file.read()
+
+else:
+    # Open and read the file
+    with open("Output_error/output_lfw_exp1000.txt", "r") as file:
+        content = file.read()
+
 
 #cut first part of output 
 content = content[content.find(f"running 0|{num_exp} experiment"):]
@@ -17,10 +24,10 @@ content = content[content.find(f"running 0|{num_exp} experiment"):]
 # Adjust this if there's a more specific marker
 parts = content.split('----------------------')
 
+print(parts[0])
+
 #remove empty last element
 parts = parts[:-1]
-
-print(parts[0])
 
 ## LABEL ACCURACY 
 
@@ -35,8 +42,11 @@ for i in range(0,num_exp):
 
     gt_label = parts[i].find("gt_label:")
     end = parts[i].find("lab_iDLG") #+12
-    line = parts[i][gt_label:end+12]
 
+    line = parts[i][gt_label:end+15]
+
+    #line = parts[i][gt_label:end+12]
+    print(line)
     # Split the line by whitespace or newlines
     line = re.split(r"[ \n\[\]]+", line)
     if line[3] == line[1]:
@@ -171,27 +181,27 @@ thresholds = [0.01, 0.005, 0.001, 0.0005, 0.0001]  # Corresponding thresholds
 fidelity_percentage_DLG = [f * 100 for f in fidelity_count_DLG]
 fidelity_percentage_iDLG = [f * 100 for f in fidelity_count_iDLG]
 
-
 # Plotting
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(10, 8))
 
 # DLG - blue line with circular markers
-plt.plot(thresholds, fidelity_percentage_DLG, marker='o', color='blue', label='DLG', linestyle='-', markersize=8)
+plt.plot(thresholds, fidelity_percentage_DLG, marker='o', color='blue', label='DLG', linestyle='-', markersize=10, linewidth = 3)
 
 # iDLG - red line with star markers
-plt.plot(thresholds, fidelity_percentage_iDLG, marker='*', color='red', label='iDLG', linestyle='-', markersize=10)
+plt.plot(thresholds, fidelity_percentage_iDLG, marker='*', color='red', label='iDLG', linestyle='-', markersize=12, linewidth = 3)
 
-# Title and labels
-plt.title(dataset, fontsize=16)
-plt.xlabel('Fidelity Threshold (MSE)', fontsize=12)
-plt.ylabel('% of Good Fidelity', fontsize=12)
+# Title and labels with increased font sizes
+plt.title(dataset, fontsize=30)
+plt.xlabel('Fidelity Threshold (MSE)', fontsize=40)
+plt.ylabel('% of Good Fidelity', fontsize=40)
 
 # Set x-axis to log scale to match the target plot and reverse the axis direction
 plt.xscale('log')
 plt.gca().invert_xaxis()  # Reverse the x-axis
 
 # Customize the ticks on the x-axis to match the target plot (show exact thresholds instead of scientific notation)
-plt.xticks([0.01, 0.005, 0.001, 0.0005, 0.0001], ['0.01', '0.005', '0.001', '0.0005', '0.0001'])
+plt.xticks([0.01, 0.005, 0.001, 0.0005, 0.0001], ['0.01', '0.005', '0.001', '0.0005', '0.0001'], fontsize=30)
+plt.yticks([0,25,50,75,100],["0","25","50","75","100"], fontsize=30)
 
 # Set y-axis limits from 0 to 100
 plt.ylim(0, 100)
@@ -199,8 +209,78 @@ plt.ylim(0, 100)
 # Gridlines (optional, you can modify the linewidth if needed)
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 
-# Legend
-plt.legend()
+# Legend with increased font size
+plt.legend(fontsize=15)
 
 # Show plot
 #plt.show()
+
+
+
+##Statistical comparison of label prediction accuracy 
+from statsmodels.stats.contingency_tables import mcnemar
+
+# Suppose you have these contingency table values
+# [A] : Count where both DLG and iDLG are correct
+# [B] : Count where DLG is correct but iDLG is incorrect
+# [C] : Count where DLG is incorrect but iDLG is correct
+# [D] : Count where both DLG and iDLG are incorrect
+
+A = 0
+B = 0
+C = 0
+D = 0 
+
+for i in range(0,num_exp):
+
+    gt_label = parts[i].find("gt_label:")
+    end = parts[i].find("lab_iDLG") #+12
+    line = parts[i][gt_label:end+12]
+
+    # Split the line by whitespace or newlines
+    line = re.split(r"[ \n\[\]]+", line)
+    if line[3] == line[1] and line[5] == line[1]:
+        A += 1
+    
+    if line[3] == line[1] and line[5] != line[1]:
+        B += 1
+
+    if line[5] == line[1] and line[3] != line[1]:
+        C += 1
+
+    if line[3] != line[1] and line[5] != line[1]:
+        D += 1
+
+
+print(A)
+print(B)
+print(C)
+print(D)
+
+contingency_table = [[A, B], [C, D]]
+
+print(contingency_table)
+
+result = mcnemar(contingency_table, exact=True)
+print(result.pvalue)
+
+#Statistical comparison of reproduced and original results
+
+"""
+MNIST_OG = 0.899
+CIFAR_OG = 0.833
+LFW_OG = 0.791 
+
+MNIST_reprod = 0.849
+CIFAR_reprod = 0.905
+LFW_reprod = 0.0 
+
+#z_test 
+
+p_mnist = (899+849)/2000
+p_cifar = (833+905)/2000
+
+z_mnist = ((0.899-0.849)-0)/(np.sqrt(p_mnist*(1-p_mnist)*((1/1000)+(1/1000))))
+
+print(z_mnist)
+"""
