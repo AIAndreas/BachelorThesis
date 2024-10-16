@@ -98,10 +98,11 @@ def main():
     lr = 1.0
     num_dummy = 1
     Iteration = 300
-    num_exp = 1
+    num_exp = 20
 
     use_cuda = torch.cuda.is_available()
-    device = 'cuda' if use_cuda else 'cpu'
+    #device = 'cuda' if use_cuda else 'cpu'
+    device = "cpu"
 
     tt = transforms.Compose([transforms.ToTensor()])
     tp = transforms.Compose([transforms.ToPILImage()])
