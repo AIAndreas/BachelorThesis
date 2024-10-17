@@ -188,11 +188,11 @@ def audio_mnist_dataset(data_path, shape_img):
 
 def adjust_learning_rate(optimizer, its, warmup_iterations=10):
     if its < warmup_iterations:
-        lr = 1e-3 # Increase LR over warmup epochs
+        lr = 0.5 # Increase LR over warmup epochs
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr
     else:
-        lr = 1e-1
+        lr = 0.05
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr
 def main():
