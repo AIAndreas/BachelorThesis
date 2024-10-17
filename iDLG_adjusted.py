@@ -19,7 +19,7 @@ class LeNet(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 65, 26]),
+            nn.LayerNorm([12, 65, 25]),
             # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
@@ -201,10 +201,10 @@ def main():
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
     
-    lr = 0.01
+    lr = 1
     num_dummy = 1
-    Iteration = 200
-    num_exp = 20
+    Iteration = 300
+    num_exp = 1000
 
     use_cuda = torch.cuda.is_available()
     #device = 'cuda' if use_cuda else 'cpu'
@@ -276,7 +276,7 @@ def main():
         net = net.to(device)
         idx_shuffle = np.random.permutation(len(dst))
 
-        for method in ['DLG', 'iDLG']:
+        for method in ['iDLG']:
             print('%s, Try to generate %d images' % (method, num_dummy))
 
             criterion = nn.CrossEntropyLoss().to(device)
@@ -324,7 +324,7 @@ def main():
             print('lr =', lr)
             for iters in range(Iteration):
                 
-                adjust_learning_rate(optimizer, iters)
+                # adjust_learning_rate(optimizer, iters)
                 
                 dummy_data_log = dummy_data
                 if iters % int(Iteration / 20) == 0:
@@ -380,25 +380,25 @@ def main():
                     history_iters.append(iters)
                     break
 
-            print("history_length:", len(history))
-            for imidx in range(num_dummy):
-                    plt.figure(figsize=(12, 8))
-                    plt.subplot(3, 10, 1)
-                    plt.imshow(gt_data[imidx][0].cpu(), cmap='gray')
-                    for i in range(len(history)):
-                        plt.subplot(3, 10, i + 2)
-                        # Retrieve the image tensor for the current iteration and image index
-                        # print(history[i][imidx])
-                        img = history[i][imidx][0]
-                        plt.imshow(img, cmap='gray')
-                        plt.title('iter=%d' % (history_iters[i]))
-                        plt.axis('off')
-                    if method == 'DLG':
-                        plt.savefig('%s/DLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
-                        plt.close()
-                    elif method == 'iDLG':
-                        plt.savefig('%s/iDLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
-                        plt.close()
+            # print("history_length:", len(history))
+            # for imidx in range(num_dummy):
+            #         plt.figure(figsize=(12, 8))
+            #         plt.subplot(3, 10, 1)
+            #         plt.imshow(gt_data[imidx][0].cpu(), cmap='gray')
+            #         for i in range(len(history)):
+            #             plt.subplot(3, 10, i + 2)
+            #             # Retrieve the image tensor for the current iteration and image index
+            #             # print(history[i][imidx])
+            #             img = history[i][imidx][0]
+            #             plt.imshow(img, cmap='gray')
+            #             plt.title('iter=%d' % (history_iters[i]))
+            #             plt.axis('off')
+            #         if method == 'DLG':
+            #             plt.savefig('%s/DLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
+            #             plt.close()
+            #         elif method == 'iDLG':
+            #             plt.savefig('%s/iDLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
+            #             plt.close()
 
             if method == 'DLG':
                 loss_DLG = losses
@@ -412,8 +412,8 @@ def main():
 
 
         print('imidx_list:', imidx_list)
-        print('loss_DLG:', loss_DLG[-1], 'loss_iDLG:', loss_iDLG[-1])
-        print('mse_DLG:', mse_DLG[-1], 'mse_iDLG:', mse_iDLG[-1])
+        print('loss_iDLG:', loss_iDLG[-1])
+        print(, 'mse_iDLG:', mse_iDLG[-1])
         print('gt_label:', gt_label.detach().cpu().data.numpy(), 'lab_DLG:', label_DLG, 'lab_iDLG:', label_iDLG)
 
         print('----------------------\n\n')
