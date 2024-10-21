@@ -1,0 +1,1421 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: audioread==3.0.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 1)) (3.0.1)
+Requirement already satisfied: certifi==2024.8.30 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 2)) (2024.8.30)
+Requirement already satisfied: cffi==1.17.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 3)) (1.17.1)
+Requirement already satisfied: charset-normalizer==3.3.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 4)) (3.3.2)
+Requirement already satisfied: contourpy==1.3.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 5)) (1.3.0)
+Requirement already satisfied: cycler==0.12.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 6)) (0.12.1)
+Requirement already satisfied: decorator==5.1.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 7)) (5.1.1)
+Requirement already satisfied: filelock==3.13.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 8)) (3.13.1)
+Requirement already satisfied: fonttools==4.53.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 9)) (4.53.1)
+Requirement already satisfied: fsspec==2024.2.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 10)) (2024.2.0)
+Requirement already satisfied: idna==3.10 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 11)) (3.10)
+Requirement already satisfied: importlib_resources==6.4.5 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 12)) (6.4.5)
+Requirement already satisfied: Jinja2==3.1.3 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 13)) (3.1.3)
+Requirement already satisfied: joblib==1.4.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 14)) (1.4.2)
+Requirement already satisfied: kiwisolver==1.4.7 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 15)) (1.4.7)
+Requirement already satisfied: lazy_loader==0.4 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 16)) (0.4)
+Requirement already satisfied: librosa==0.10.2.post1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 17)) (0.10.2.post1)
+Requirement already satisfied: llvmlite==0.43.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 18)) (0.43.0)
+Requirement already satisfied: MarkupSafe==2.1.5 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 19)) (2.1.5)
+Requirement already satisfied: matplotlib==3.9.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 20)) (3.9.2)
+Requirement already satisfied: mpmath==1.3.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 21)) (1.3.0)
+Requirement already satisfied: msgpack==1.1.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 22)) (1.1.0)
+Requirement already satisfied: networkx==3.2.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 23)) (3.2.1)
+Requirement already satisfied: numba==0.60.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 24)) (0.60.0)
+Requirement already satisfied: numpy==1.26.3 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 25)) (1.26.3)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.2.65 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 26)) (12.4.2.65)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 27)) (12.4.99)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 28)) (12.4.99)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 29)) (12.4.99)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 30)) (9.1.0.70)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.0.44 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 31)) (11.2.0.44)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.119 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 32)) (10.3.5.119)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.0.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 33)) (11.6.0.99)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.0.142 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 34)) (12.3.0.142)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 35)) (2.20.5)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 36)) (12.4.99)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.99 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 37)) (12.4.99)
+Requirement already satisfied: packaging==24.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 38)) (24.1)
+Requirement already satisfied: pillow==10.2.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 39)) (10.2.0)
+Requirement already satisfied: pip==24.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 40)) (24.2)
+Requirement already satisfied: platformdirs==4.3.6 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 41)) (4.3.6)
+Requirement already satisfied: pooch==1.8.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 42)) (1.8.2)
+Requirement already satisfied: pycparser==2.22 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 43)) (2.22)
+Requirement already satisfied: pyparsing==3.1.4 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 44)) (3.1.4)
+Requirement already satisfied: python-dateutil==2.9.0.post0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 45)) (2.9.0.post0)
+Requirement already satisfied: requests==2.32.3 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 46)) (2.32.3)
+Requirement already satisfied: scikit-learn==1.5.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 47)) (1.5.2)
+Requirement already satisfied: scipy==1.13.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 48)) (1.13.1)
+Requirement already satisfied: setuptools==53.0.0 in /usr/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 49)) (53.0.0)
+Requirement already satisfied: six==1.16.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 50)) (1.16.0)
+Requirement already satisfied: soundfile==0.12.1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 51)) (0.12.1)
+Requirement already satisfied: soxr==0.5.0.post1 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 52)) (0.5.0.post1)
+Requirement already satisfied: sympy==1.12 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 53)) (1.12)
+Requirement already satisfied: threadpoolctl==3.5.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 54)) (3.5.0)
+Requirement already satisfied: torch==2.4.1+cu124 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 55)) (2.4.1+cu124)
+Requirement already satisfied: torchaudio==2.4.1+cu124 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 56)) (2.4.1+cu124)
+Requirement already satisfied: torchvision==0.19.1+cu124 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 57)) (0.19.1+cu124)
+Requirement already satisfied: triton==3.0.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 58)) (3.0.0)
+Requirement already satisfied: typing_extensions==4.9.0 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 59)) (4.9.0)
+Requirement already satisfied: urllib3==2.2.3 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 60)) (2.2.3)
+Requirement already satisfied: zipp==3.20.2 in /zhome/a6/f/169164/.local/lib/python3.9/site-packages (from -r /zhome/a6/f/169164/Desktop/requirements.txt (line 61)) (3.20.2)
+lfw root_path: /zhome/a6/f/169164/Desktop/BA_thesis1/BachelorThesis
+lfw data_path: /zhome/a6/f/169164/Desktop/BA_thesis1/BachelorThesis/data
+lfw save_path: /zhome/a6/f/169164/Desktop/BA_thesis1/BachelorThesis/results/iDLG_lfw
+hey
+/zhome/a6/f/169164/Desktop/BA_thesis1/BachelorThesis
+running 0|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D959BA60>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 13:50:32] 0 loss = 366.18731689, mse = 1.84256136
+[2024-10-07 13:50:46] 10 loss = 1.28977096, mse = 0.34835348
+[2024-10-07 13:50:59] 20 loss = 0.06261108, mse = 0.08315843
+[2024-10-07 13:51:13] 30 loss = 0.01006649, mse = 0.02737018
+[2024-10-07 13:51:27] 40 loss = 0.00250329, mse = 0.01067625
+[2024-10-07 13:51:42] 50 loss = 0.00072917, mse = 0.00407044
+[2024-10-07 13:51:56] 60 loss = 0.00025389, mse = 0.00155590
+[2024-10-07 13:52:11] 70 loss = 0.00009248, mse = 0.00057821
+[2024-10-07 13:52:24] 80 loss = 0.00003534, mse = 0.00021936
+[2024-10-07 13:52:36] 90 loss = 0.00001710, mse = 0.00008239
+[2024-10-07 13:52:49] 100 loss = 0.00000922, mse = 0.00002994
+[2024-10-07 13:53:01] 110 loss = 0.00000603, mse = 0.00001042
+[2024-10-07 13:53:08] 120 loss = 0.00000521, mse = 0.00000616
+[2024-10-07 13:53:16] 130 loss = 0.00000452, mse = 0.00000355
+[2024-10-07 13:53:24] 140 loss = 0.00000412, mse = 0.00000234
+[2024-10-07 13:53:28] 150 loss = 0.00000400, mse = 0.00000203
+[2024-10-07 13:53:33] 160 loss = 0.00000382, mse = 0.00000174
+[2024-10-07 13:53:38] 170 loss = 0.00000367, mse = 0.00000158
+[2024-10-07 13:53:41] 180 loss = 0.00000362, mse = 0.00000154
+[2024-10-07 13:53:45] 190 loss = 0.00000357, mse = 0.00000150
+[2024-10-07 13:53:48] 200 loss = 0.00000352, mse = 0.00000147
+[2024-10-07 13:53:52] 210 loss = 0.00000345, mse = 0.00000143
+[2024-10-07 13:53:56] 220 loss = 0.00000338, mse = 0.00000144
+[2024-10-07 13:54:01] 230 loss = 0.00000329, mse = 0.00000158
+[2024-10-07 13:54:04] 240 loss = 0.00000324, mse = 0.00000163
+[2024-10-07 13:54:09] 250 loss = 0.00000315, mse = 0.00000155
+[2024-10-07 13:54:14] 260 loss = 0.00000307, mse = 0.00000156
+[2024-10-07 13:54:16] 270 loss = 0.00000303, mse = 0.00000159
+[2024-10-07 13:54:21] 280 loss = 0.00000298, mse = 0.00000158
+[2024-10-07 13:54:25] 290 loss = 0.00000293, mse = 0.00000173
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4BE0940>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 13:54:28] 0 loss = 70.05792999, mse = 1.26957977
+[2024-10-07 13:54:40] 10 loss = 0.67685038, mse = 0.24455482
+[2024-10-07 13:54:53] 20 loss = 0.03929235, mse = 0.05919119
+[2024-10-07 13:55:05] 30 loss = 0.00704676, mse = 0.02132978
+[2024-10-07 13:55:18] 40 loss = 0.00183576, mse = 0.00726765
+[2024-10-07 13:55:31] 50 loss = 0.00049196, mse = 0.00244871
+[2024-10-07 13:55:43] 60 loss = 0.00015617, mse = 0.00087801
+[2024-10-07 13:55:56] 70 loss = 0.00004678, mse = 0.00028282
+[2024-10-07 13:56:06] 80 loss = 0.00001593, mse = 0.00010134
+[2024-10-07 13:56:16] 90 loss = 0.00000526, mse = 0.00003753
+[2024-10-07 13:56:26] 100 loss = 0.00000204, mse = 0.00001604
+[2024-10-07 13:56:37] 110 loss = 0.00000095, mse = 0.00000768
+imidx_list: [9451]
+loss_DLG: 2.929707761722966e-06 loss_iDLG: 9.52378115925967e-07
+mse_DLG: 1.728819370327983e-06 mse_iDLG: 7.680008820898365e-06
+gt_label: [4224] lab_DLG: 4224 lab_iDLG: 4224
+----------------------
+
+
+running 1|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D959B280>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 13:56:39] 0 loss = 403.09042358, mse = 1.21971893
+[2024-10-07 13:56:52] 10 loss = 21.29181671, mse = 1.91139400
+[2024-10-07 13:57:05] 20 loss = 6.28736258, mse = 1.24965584
+[2024-10-07 13:57:19] 30 loss = 2.21395493, mse = 0.80680531
+[2024-10-07 13:57:32] 40 loss = 0.76591045, mse = 0.40512457
+[2024-10-07 13:57:47] 50 loss = 0.17995392, mse = 0.13975231
+[2024-10-07 13:57:59] 60 loss = 0.03414864, mse = 0.04696834
+[2024-10-07 13:58:12] 70 loss = 0.00781193, mse = 0.01572747
+[2024-10-07 13:58:26] 80 loss = 0.00191947, mse = 0.00498704
+[2024-10-07 13:58:40] 90 loss = 0.00062555, mse = 0.00193229
+[2024-10-07 13:58:51] 100 loss = 0.00021685, mse = 0.00067770
+[2024-10-07 13:59:01] 110 loss = 0.00007830, mse = 0.00024071
+[2024-10-07 13:59:14] 120 loss = 0.00002628, mse = 0.00007991
+[2024-10-07 13:59:26] 130 loss = 0.00001044, mse = 0.00003389
+[2024-10-07 13:59:39] 140 loss = 0.00000579, mse = 0.00001944
+[2024-10-07 13:59:50] 150 loss = 0.00000422, mse = 0.00001388
+[2024-10-07 13:59:57] 160 loss = 0.00000370, mse = 0.00001205
+[2024-10-07 14:00:03] 170 loss = 0.00000340, mse = 0.00001069
+[2024-10-07 14:00:10] 180 loss = 0.00000304, mse = 0.00000904
+[2024-10-07 14:00:15] 190 loss = 0.00000287, mse = 0.00000808
+[2024-10-07 14:00:20] 200 loss = 0.00000270, mse = 0.00000735
+[2024-10-07 14:00:25] 210 loss = 0.00000258, mse = 0.00000667
+[2024-10-07 14:00:27] 220 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:29] 230 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:31] 240 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:33] 250 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:35] 260 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:37] 270 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:39] 280 loss = 0.00000258, mse = 0.00000659
+[2024-10-07 14:00:41] 290 loss = 0.00000258, mse = 0.00000659
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D587E280>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:00:44] 0 loss = 243.70848083, mse = 11.51399994
+[2024-10-07 14:00:55] 10 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:00:56] 20 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:00:57] 30 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:00:59] 40 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:00] 50 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:01] 60 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:03] 70 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:04] 80 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:06] 90 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:07] 100 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:08] 110 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:10] 120 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:11] 130 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:13] 140 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:14] 150 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:16] 160 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:17] 170 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:19] 180 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:20] 190 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:22] 200 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:23] 210 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:25] 220 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:27] 230 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:28] 240 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:30] 250 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:32] 260 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:34] 270 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:36] 280 loss = 348.38284302, mse = 733209100288.00000000
+[2024-10-07 14:01:38] 290 loss = 348.38284302, mse = 733209100288.00000000
+imidx_list: [2078]
+loss_DLG: 2.575711732788477e-06 loss_iDLG: 348.3828430175781
+mse_DLG: 6.587112238776172e-06 mse_iDLG: 733209100288.0
+gt_label: [1017] lab_DLG: 1017 lab_iDLG: 1017
+----------------------
+
+
+running 2|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5808A60>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:01:41] 0 loss = 515.55517578, mse = 1.28471160
+[2024-10-07 14:01:46] 10 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:47] 20 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:48] 30 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:50] 40 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:51] 50 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:52] 60 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:53] 70 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:54] 80 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:56] 90 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:57] 100 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:01:59] 110 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:00] 120 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:02] 130 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:03] 140 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:04] 150 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:06] 160 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:07] 170 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:09] 180 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:11] 190 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:12] 200 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:14] 210 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:16] 220 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:17] 230 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:19] 240 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:21] 250 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:23] 260 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:24] 270 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:26] 280 loss = 1440.15893555, mse = 661157440.00000000
+[2024-10-07 14:02:28] 290 loss = 1440.15893555, mse = 661157440.00000000
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D546C0A0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:02:31] 0 loss = 71.40708160, mse = 1.20087612
+[2024-10-07 14:02:43] 10 loss = 1.80084455, mse = 0.45221713
+[2024-10-07 14:02:55] 20 loss = 0.17646584, mse = 0.11999444
+[2024-10-07 14:03:08] 30 loss = 0.02077023, mse = 0.03442825
+[2024-10-07 14:03:20] 40 loss = 0.00464868, mse = 0.01139062
+[2024-10-07 14:03:33] 50 loss = 0.00126800, mse = 0.00482236
+[2024-10-07 14:03:43] 60 loss = 0.00041667, mse = 0.00204622
+[2024-10-07 14:03:53] 70 loss = 0.00016031, mse = 0.00097943
+[2024-10-07 14:04:04] 80 loss = 0.00007345, mse = 0.00051064
+[2024-10-07 14:04:15] 90 loss = 0.00003684, mse = 0.00027886
+[2024-10-07 14:04:26] 100 loss = 0.00001964, mse = 0.00015854
+[2024-10-07 14:04:38] 110 loss = 0.00001104, mse = 0.00009219
+[2024-10-07 14:04:50] 120 loss = 0.00000681, mse = 0.00005539
+[2024-10-07 14:05:02] 130 loss = 0.00000411, mse = 0.00003243
+[2024-10-07 14:05:13] 140 loss = 0.00000271, mse = 0.00002180
+[2024-10-07 14:05:26] 150 loss = 0.00000180, mse = 0.00001379
+[2024-10-07 14:05:36] 160 loss = 0.00000137, mse = 0.00001062
+[2024-10-07 14:05:43] 170 loss = 0.00000116, mse = 0.00000882
+[2024-10-07 14:05:47] 180 loss = 0.00000107, mse = 0.00000823
+[2024-10-07 14:05:52] 190 loss = 0.00000099, mse = 0.00000753
+imidx_list: [22]
+loss_DLG: 1440.158935546875 loss_iDLG: 9.886066436592955e-07
+mse_DLG: 661157440.0 mse_iDLG: 7.527329671574989e-06
+gt_label: [17] lab_DLG: 3293 lab_iDLG: 17
+----------------------
+
+
+running 3|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5646FD0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:05:54] 0 loss = 148.94473267, mse = 96.05999756
+[2024-10-07 14:06:08] 10 loss = 55.15782928, mse = 32.03839111
+[2024-10-07 14:06:21] 20 loss = 37.26478577, mse = 30.81379890
+[2024-10-07 14:06:34] 30 loss = 29.88595772, mse = 29.56203651
+[2024-10-07 14:06:48] 40 loss = 24.85310936, mse = 29.65501976
+[2024-10-07 14:07:02] 50 loss = 21.33187103, mse = 30.48520088
+[2024-10-07 14:07:17] 60 loss = 18.77301025, mse = 31.57468414
+[2024-10-07 14:07:33] 70 loss = 16.82597733, mse = 32.84986496
+[2024-10-07 14:07:46] 80 loss = 15.30925846, mse = 34.83423233
+[2024-10-07 14:08:01] 90 loss = 13.88661861, mse = 36.96634293
+[2024-10-07 14:08:17] 100 loss = 12.64114189, mse = 39.39874649
+[2024-10-07 14:08:30] 110 loss = 11.69320965, mse = 40.97610855
+[2024-10-07 14:08:45] 120 loss = 11.01571941, mse = 42.80064774
+[2024-10-07 14:09:00] 130 loss = 10.50436211, mse = 44.70288086
+[2024-10-07 14:09:15] 140 loss = 9.93945789, mse = 46.86164856
+[2024-10-07 14:09:31] 150 loss = 9.47089958, mse = 48.25672531
+[2024-10-07 14:09:46] 160 loss = 9.06160069, mse = 49.84618759
+[2024-10-07 14:10:02] 170 loss = 8.74320030, mse = 51.19556808
+[2024-10-07 14:10:16] 180 loss = 8.31024075, mse = 53.14823532
+[2024-10-07 14:10:32] 190 loss = 7.94719791, mse = 54.66718674
+[2024-10-07 14:10:47] 200 loss = 7.64844799, mse = 55.81318283
+[2024-10-07 14:11:02] 210 loss = 7.44577122, mse = 56.83322525
+[2024-10-07 14:11:19] 220 loss = 7.25601053, mse = 58.14514542
+[2024-10-07 14:11:34] 230 loss = 7.09036350, mse = 59.15780640
+[2024-10-07 14:11:48] 240 loss = 6.94983959, mse = 60.09423447
+[2024-10-07 14:12:03] 250 loss = 6.80744600, mse = 61.41910172
+[2024-10-07 14:12:18] 260 loss = 6.64907694, mse = 62.42698288
+[2024-10-07 14:12:33] 270 loss = 6.50132942, mse = 63.23332214
+[2024-10-07 14:12:48] 280 loss = 6.41015244, mse = 64.10460663
+[2024-10-07 14:13:03] 290 loss = 6.29330492, mse = 65.12031555
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4E5793BB0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:13:17] 0 loss = 28.64765930, mse = 1.15419209
+[2024-10-07 14:13:28] 10 loss = 0.71102071, mse = 0.35954723
+[2024-10-07 14:13:41] 20 loss = 0.04480205, mse = 0.08579475
+[2024-10-07 14:13:53] 30 loss = 0.00615116, mse = 0.02692047
+[2024-10-07 14:14:05] 40 loss = 0.00147915, mse = 0.00957045
+[2024-10-07 14:14:18] 50 loss = 0.00040807, mse = 0.00353617
+[2024-10-07 14:14:30] 60 loss = 0.00014625, mse = 0.00152118
+[2024-10-07 14:14:42] 70 loss = 0.00005031, mse = 0.00056727
+[2024-10-07 14:14:54] 80 loss = 0.00001976, mse = 0.00024812
+[2024-10-07 14:15:06] 90 loss = 0.00000880, mse = 0.00012293
+[2024-10-07 14:15:19] 100 loss = 0.00000447, mse = 0.00006520
+[2024-10-07 14:15:31] 110 loss = 0.00000244, mse = 0.00003644
+[2024-10-07 14:15:43] 120 loss = 0.00000147, mse = 0.00002277
+[2024-10-07 14:15:50] 130 loss = 0.00000115, mse = 0.00001758
+[2024-10-07 14:15:57] 140 loss = 0.00000094, mse = 0.00001414
+imidx_list: [3951]
+loss_DLG: 6.216636657714844 loss_iDLG: 9.400840212947514e-07
+mse_DLG: 65.56751251220703 mse_iDLG: 1.4140281564323232e-05
+gt_label: [1868] lab_DLG: 1868 lab_iDLG: 1868
+----------------------
+
+
+running 4|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5016DF0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:15:59] 0 loss = 409.92706299, mse = 1.28071916
+[2024-10-07 14:16:12] 10 loss = 22.19570732, mse = 4.61500120
+[2024-10-07 14:16:24] 20 loss = 9.57647610, mse = 3.90439534
+[2024-10-07 14:16:36] 30 loss = 5.58657885, mse = 4.02789450
+[2024-10-07 14:16:50] 40 loss = 3.85023952, mse = 4.43025160
+[2024-10-07 14:17:00] 50 loss = 2.90832925, mse = 4.81661415
+[2024-10-07 14:17:11] 60 loss = 2.23768997, mse = 5.15027332
+[2024-10-07 14:17:23] 70 loss = 1.87012327, mse = 5.46477365
+[2024-10-07 14:17:35] 80 loss = 1.62266290, mse = 5.78169060
+[2024-10-07 14:17:46] 90 loss = 1.47369635, mse = 6.16660833
+[2024-10-07 14:17:56] 100 loss = 1.35117209, mse = 6.57233095
+[2024-10-07 14:18:07] 110 loss = 1.26874268, mse = 7.12705421
+[2024-10-07 14:18:18] 120 loss = 1.19225299, mse = 7.63645935
+[2024-10-07 14:18:28] 130 loss = 1.13003147, mse = 8.07135296
+[2024-10-07 14:18:39] 140 loss = 1.06811655, mse = 8.58287144
+[2024-10-07 14:18:50] 150 loss = 1.01632750, mse = 9.06874561
+[2024-10-07 14:19:01] 160 loss = 0.96951872, mse = 9.39787579
+[2024-10-07 14:19:12] 170 loss = 0.93431646, mse = 9.72042274
+[2024-10-07 14:19:23] 180 loss = 0.90012127, mse = 10.21418285
+[2024-10-07 14:19:34] 190 loss = 0.87600195, mse = 10.58300114
+[2024-10-07 14:19:45] 200 loss = 0.85421371, mse = 11.14316845
+[2024-10-07 14:19:56] 210 loss = 0.83095354, mse = 11.78811169
+[2024-10-07 14:20:07] 220 loss = 0.80281889, mse = 12.42813396
+[2024-10-07 14:20:18] 230 loss = 0.78225195, mse = 12.87700653
+[2024-10-07 14:20:30] 240 loss = 0.76491666, mse = 13.35820293
+[2024-10-07 14:20:41] 250 loss = 0.74828511, mse = 13.88153458
+[2024-10-07 14:20:52] 260 loss = 0.73403293, mse = 14.34584045
+[2024-10-07 14:21:04] 270 loss = 0.72134191, mse = 14.83410168
+[2024-10-07 14:21:15] 280 loss = 0.71031022, mse = 15.33534241
+[2024-10-07 14:21:26] 290 loss = 0.70045370, mse = 15.88029575
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D52A32E0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:21:38] 0 loss = 66.12348938, mse = 1.09333491
+[2024-10-07 14:21:50] 10 loss = 1.83197796, mse = 0.53932136
+[2024-10-07 14:22:03] 20 loss = 0.25815818, mse = 0.24416047
+[2024-10-07 14:22:13] 30 loss = 0.05576719, mse = 0.11069131
+[2024-10-07 14:22:24] 40 loss = 0.01606702, mse = 0.05009075
+[2024-10-07 14:22:35] 50 loss = 0.00482513, mse = 0.02339903
+[2024-10-07 14:22:48] 60 loss = 0.00184485, mse = 0.01235643
+[2024-10-07 14:22:59] 70 loss = 0.00084786, mse = 0.00680221
+[2024-10-07 14:23:09] 80 loss = 0.00041355, mse = 0.00357386
+[2024-10-07 14:23:20] 90 loss = 0.00019175, mse = 0.00180083
+[2024-10-07 14:23:31] 100 loss = 0.00010203, mse = 0.00100526
+[2024-10-07 14:23:43] 110 loss = 0.00005472, mse = 0.00053839
+[2024-10-07 14:23:55] 120 loss = 0.00003025, mse = 0.00028792
+[2024-10-07 14:24:06] 130 loss = 0.00001764, mse = 0.00016591
+[2024-10-07 14:24:17] 140 loss = 0.00001092, mse = 0.00010280
+[2024-10-07 14:24:28] 150 loss = 0.00000668, mse = 0.00006356
+[2024-10-07 14:24:39] 160 loss = 0.00000444, mse = 0.00004107
+[2024-10-07 14:24:49] 170 loss = 0.00000330, mse = 0.00003086
+[2024-10-07 14:24:59] 180 loss = 0.00000255, mse = 0.00002333
+[2024-10-07 14:25:09] 190 loss = 0.00000201, mse = 0.00001876
+[2024-10-07 14:25:16] 200 loss = 0.00000169, mse = 0.00001559
+[2024-10-07 14:25:22] 210 loss = 0.00000151, mse = 0.00001389
+[2024-10-07 14:25:24] 220 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:26] 230 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:28] 240 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:30] 250 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:32] 260 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:34] 270 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:36] 280 loss = 0.00000147, mse = 0.00001355
+[2024-10-07 14:25:38] 290 loss = 0.00000147, mse = 0.00001355
+imidx_list: [3613]
+loss_DLG: 0.6922484636306763 loss_iDLG: 1.4676714954475756e-06
+mse_DLG: 16.27772331237793 mse_iDLG: 1.355098811472999e-05
+gt_label: [1709] lab_DLG: 1709 lab_iDLG: 1709
+----------------------
+
+
+running 5|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D56B25E0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:25:41] 0 loss = 160.84831238, mse = 14.88471985
+[2024-10-07 14:25:53] 10 loss = 8.31830311, mse = 1.22571433
+[2024-10-07 14:26:06] 20 loss = 1.18797910, mse = 0.58063012
+[2024-10-07 14:26:19] 30 loss = 0.23280440, mse = 0.22119880
+[2024-10-07 14:26:31] 40 loss = 0.04957978, mse = 0.07157346
+[2024-10-07 14:26:44] 50 loss = 0.01039391, mse = 0.02378772
+[2024-10-07 14:26:57] 60 loss = 0.00253317, mse = 0.00765085
+[2024-10-07 14:27:10] 70 loss = 0.00069620, mse = 0.00261852
+[2024-10-07 14:27:21] 80 loss = 0.00022888, mse = 0.00091361
+[2024-10-07 14:27:34] 90 loss = 0.00007933, mse = 0.00036747
+[2024-10-07 14:27:46] 100 loss = 0.00003596, mse = 0.00015264
+[2024-10-07 14:27:58] 110 loss = 0.00001818, mse = 0.00006149
+[2024-10-07 14:28:10] 120 loss = 0.00001159, mse = 0.00002707
+[2024-10-07 14:28:20] 130 loss = 0.00000833, mse = 0.00001226
+[2024-10-07 14:28:28] 140 loss = 0.00000678, mse = 0.00000660
+[2024-10-07 14:28:36] 150 loss = 0.00000604, mse = 0.00000458
+[2024-10-07 14:28:41] 160 loss = 0.00000573, mse = 0.00000384
+[2024-10-07 14:28:47] 170 loss = 0.00000530, mse = 0.00000292
+[2024-10-07 14:28:53] 180 loss = 0.00000507, mse = 0.00000243
+[2024-10-07 14:28:57] 190 loss = 0.00000493, mse = 0.00000224
+[2024-10-07 14:29:00] 200 loss = 0.00000485, mse = 0.00000215
+[2024-10-07 14:29:05] 210 loss = 0.00000473, mse = 0.00000213
+[2024-10-07 14:29:09] 220 loss = 0.00000462, mse = 0.00000208
+[2024-10-07 14:29:13] 230 loss = 0.00000453, mse = 0.00000207
+[2024-10-07 14:29:19] 240 loss = 0.00000440, mse = 0.00000184
+[2024-10-07 14:29:21] 250 loss = 0.00000440, mse = 0.00000184
+[2024-10-07 14:29:23] 260 loss = 0.00000440, mse = 0.00000184
+[2024-10-07 14:29:25] 270 loss = 0.00000440, mse = 0.00000184
+[2024-10-07 14:29:27] 280 loss = 0.00000440, mse = 0.00000184
+[2024-10-07 14:29:29] 290 loss = 0.00000440, mse = 0.00000184
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4B207C0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:29:32] 0 loss = 49.91671371, mse = 1.09572685
+[2024-10-07 14:29:44] 10 loss = 0.90558296, mse = 0.32966194
+[2024-10-07 14:29:56] 20 loss = 0.07406650, mse = 0.09380849
+[2024-10-07 14:30:07] 30 loss = 0.01288296, mse = 0.03157981
+[2024-10-07 14:30:18] 40 loss = 0.00321969, mse = 0.01150147
+[2024-10-07 14:30:28] 50 loss = 0.00096963, mse = 0.00436706
+[2024-10-07 14:30:39] 60 loss = 0.00033264, mse = 0.00169381
+[2024-10-07 14:30:50] 70 loss = 0.00011010, mse = 0.00062936
+[2024-10-07 14:31:01] 80 loss = 0.00004215, mse = 0.00025901
+[2024-10-07 14:31:11] 90 loss = 0.00001709, mse = 0.00010795
+[2024-10-07 14:31:22] 100 loss = 0.00000753, mse = 0.00004634
+[2024-10-07 14:31:33] 110 loss = 0.00000330, mse = 0.00001995
+[2024-10-07 14:31:46] 120 loss = 0.00000159, mse = 0.00000937
+[2024-10-07 14:31:59] 130 loss = 0.00000084, mse = 0.00000497
+imidx_list: [4198]
+loss_DLG: 4.395983978611184e-06 loss_iDLG: 8.448500352642441e-07
+mse_DLG: 1.8436172695146524e-06 mse_iDLG: 4.971376256435178e-06
+gt_label: [1971] lab_DLG: 1971 lab_iDLG: 1971
+----------------------
+
+
+running 6|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D53E2880>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:32:01] 0 loss = 308.44772339, mse = 18987.82226562
+[2024-10-07 14:32:06] 10 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:07] 20 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:08] 30 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:09] 40 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:10] 50 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:11] 60 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:13] 70 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:14] 80 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:15] 90 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:16] 100 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:18] 110 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:19] 120 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:20] 130 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:22] 140 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:23] 150 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:25] 160 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:26] 170 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:28] 180 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:29] 190 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:31] 200 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:32] 210 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:34] 220 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:36] 230 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:37] 240 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:39] 250 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:41] 260 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:42] 270 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:44] 280 loss = 1068.25207520, mse = 448755616.00000000
+[2024-10-07 14:32:46] 290 loss = 1068.25207520, mse = 448755616.00000000
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5899CA0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:32:49] 0 loss = 58.54920197, mse = 1.40304506
+[2024-10-07 14:33:00] 10 loss = 1.62076032, mse = 0.46473947
+[2024-10-07 14:33:12] 20 loss = 0.07870823, mse = 0.09328220
+[2024-10-07 14:33:25] 30 loss = 0.00973528, mse = 0.02618980
+[2024-10-07 14:33:37] 40 loss = 0.00184541, mse = 0.00787339
+[2024-10-07 14:33:48] 50 loss = 0.00049088, mse = 0.00271390
+[2024-10-07 14:33:58] 60 loss = 0.00014101, mse = 0.00081694
+[2024-10-07 14:34:09] 70 loss = 0.00004135, mse = 0.00026792
+[2024-10-07 14:34:21] 80 loss = 0.00001401, mse = 0.00009937
+[2024-10-07 14:34:33] 90 loss = 0.00000558, mse = 0.00004083
+[2024-10-07 14:34:44] 100 loss = 0.00000234, mse = 0.00001803
+[2024-10-07 14:34:56] 110 loss = 0.00000117, mse = 0.00000943
+[2024-10-07 14:35:03] 120 loss = 0.00000086, mse = 0.00000708
+imidx_list: [12083]
+loss_DLG: 1068.2520751953125 loss_iDLG: 8.640937494419632e-07
+mse_DLG: 448755616.0 mse_iDLG: 7.082174761308124e-06
+gt_label: [5421] lab_DLG: 4659 lab_iDLG: 5421
+----------------------
+
+
+running 7|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4E566CB80>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:35:05] 0 loss = 342.89218140, mse = 1.31611001
+[2024-10-07 14:35:18] 10 loss = 1.59127700, mse = 0.41846931
+[2024-10-07 14:35:30] 20 loss = 0.11417077, mse = 0.11539918
+[2024-10-07 14:35:44] 30 loss = 0.01470217, mse = 0.03163550
+[2024-10-07 14:35:58] 40 loss = 0.00298736, mse = 0.01098923
+[2024-10-07 14:36:08] 50 loss = 0.00076040, mse = 0.00400121
+[2024-10-07 14:36:18] 60 loss = 0.00023384, mse = 0.00166890
+[2024-10-07 14:36:29] 70 loss = 0.00010095, mse = 0.00087466
+[2024-10-07 14:36:39] 80 loss = 0.00004922, mse = 0.00045865
+[2024-10-07 14:36:50] 90 loss = 0.00002491, mse = 0.00023644
+[2024-10-07 14:37:00] 100 loss = 0.00001511, mse = 0.00013892
+[2024-10-07 14:37:11] 110 loss = 0.00001022, mse = 0.00008585
+[2024-10-07 14:37:19] 120 loss = 0.00000801, mse = 0.00005970
+[2024-10-07 14:37:28] 130 loss = 0.00000646, mse = 0.00004153
+[2024-10-07 14:37:35] 140 loss = 0.00000556, mse = 0.00003084
+[2024-10-07 14:37:43] 150 loss = 0.00000483, mse = 0.00002285
+[2024-10-07 14:37:50] 160 loss = 0.00000438, mse = 0.00001797
+[2024-10-07 14:37:55] 170 loss = 0.00000413, mse = 0.00001543
+[2024-10-07 14:38:00] 180 loss = 0.00000386, mse = 0.00001313
+[2024-10-07 14:38:07] 190 loss = 0.00000352, mse = 0.00001007
+[2024-10-07 14:38:11] 200 loss = 0.00000342, mse = 0.00000930
+[2024-10-07 14:38:15] 210 loss = 0.00000328, mse = 0.00000839
+[2024-10-07 14:38:18] 220 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:20] 230 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:22] 240 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:23] 250 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:25] 260 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:27] 270 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:29] 280 loss = 0.00000326, mse = 0.00000804
+[2024-10-07 14:38:31] 290 loss = 0.00000326, mse = 0.00000804
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4C07E50>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:38:34] 0 loss = 56.13698959, mse = 1.21360004
+[2024-10-07 14:38:45] 10 loss = 1.05160177, mse = 0.35213602
+[2024-10-07 14:38:56] 20 loss = 0.07474753, mse = 0.08644599
+[2024-10-07 14:39:06] 30 loss = 0.01008491, mse = 0.02452155
+[2024-10-07 14:39:18] 40 loss = 0.00216679, mse = 0.00910571
+[2024-10-07 14:39:29] 50 loss = 0.00058861, mse = 0.00322151
+[2024-10-07 14:39:41] 60 loss = 0.00018613, mse = 0.00128827
+[2024-10-07 14:39:51] 70 loss = 0.00007248, mse = 0.00059637
+[2024-10-07 14:40:02] 80 loss = 0.00002987, mse = 0.00027827
+[2024-10-07 14:40:13] 90 loss = 0.00001352, mse = 0.00013958
+[2024-10-07 14:40:23] 100 loss = 0.00000732, mse = 0.00008035
+[2024-10-07 14:40:34] 110 loss = 0.00000386, mse = 0.00004856
+[2024-10-07 14:40:44] 120 loss = 0.00000233, mse = 0.00002942
+[2024-10-07 14:40:53] 130 loss = 0.00000154, mse = 0.00001979
+[2024-10-07 14:40:59] 140 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:00] 150 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:02] 160 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:03] 170 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:05] 180 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:06] 190 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:08] 200 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:10] 210 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:11] 220 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:13] 230 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:15] 240 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:17] 250 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:19] 260 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:21] 270 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:23] 280 loss = 0.00000132, mse = 0.00001732
+[2024-10-07 14:41:25] 290 loss = 0.00000132, mse = 0.00001732
+imidx_list: [10062]
+loss_DLG: 3.255627689213725e-06 loss_iDLG: 1.3197583257351653e-06
+mse_DLG: 8.035768587433267e-06 mse_iDLG: 1.73238313436741e-05
+gt_label: [4499] lab_DLG: 4499 lab_iDLG: 4499
+----------------------
+
+
+running 8|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5031B20>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:41:28] 0 loss = 381.94458008, mse = 1.36149275
+[2024-10-07 14:41:42] 10 loss = 1.79101300, mse = 0.42315674
+[2024-10-07 14:41:53] 20 loss = 0.10538223, mse = 0.09943021
+[2024-10-07 14:42:05] 30 loss = 0.01474806, mse = 0.03250488
+[2024-10-07 14:42:16] 40 loss = 0.00373211, mse = 0.01232836
+[2024-10-07 14:42:28] 50 loss = 0.00104991, mse = 0.00420362
+[2024-10-07 14:42:40] 60 loss = 0.00035889, mse = 0.00167923
+[2024-10-07 14:42:53] 70 loss = 0.00012636, mse = 0.00060274
+[2024-10-07 14:43:05] 80 loss = 0.00004644, mse = 0.00022966
+[2024-10-07 14:43:16] 90 loss = 0.00002210, mse = 0.00010085
+[2024-10-07 14:43:27] 100 loss = 0.00001190, mse = 0.00003986
+[2024-10-07 14:43:39] 110 loss = 0.00000809, mse = 0.00001995
+[2024-10-07 14:43:51] 120 loss = 0.00000649, mse = 0.00001174
+[2024-10-07 14:43:59] 130 loss = 0.00000570, mse = 0.00000796
+[2024-10-07 14:44:05] 140 loss = 0.00000530, mse = 0.00000628
+[2024-10-07 14:44:12] 150 loss = 0.00000498, mse = 0.00000510
+[2024-10-07 14:44:17] 160 loss = 0.00000473, mse = 0.00000429
+[2024-10-07 14:44:22] 170 loss = 0.00000457, mse = 0.00000382
+[2024-10-07 14:44:27] 180 loss = 0.00000441, mse = 0.00000345
+[2024-10-07 14:44:32] 190 loss = 0.00000429, mse = 0.00000315
+[2024-10-07 14:44:36] 200 loss = 0.00000419, mse = 0.00000297
+[2024-10-07 14:44:41] 210 loss = 0.00000408, mse = 0.00000273
+[2024-10-07 14:44:46] 220 loss = 0.00000398, mse = 0.00000252
+[2024-10-07 14:44:51] 230 loss = 0.00000380, mse = 0.00000236
+[2024-10-07 14:44:57] 240 loss = 0.00000364, mse = 0.00000220
+[2024-10-07 14:45:02] 250 loss = 0.00000351, mse = 0.00000215
+[2024-10-07 14:45:07] 260 loss = 0.00000343, mse = 0.00000210
+[2024-10-07 14:45:11] 270 loss = 0.00000333, mse = 0.00000211
+[2024-10-07 14:45:14] 280 loss = 0.00000330, mse = 0.00000214
+[2024-10-07 14:45:16] 290 loss = 0.00000330, mse = 0.00000214
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5326B20>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:45:20] 0 loss = 55.48326874, mse = 1.19238865
+[2024-10-07 14:45:33] 10 loss = 1.18458474, mse = 0.35585585
+[2024-10-07 14:45:46] 20 loss = 0.08014399, mse = 0.07652377
+[2024-10-07 14:45:59] 30 loss = 0.00962067, mse = 0.02108766
+[2024-10-07 14:46:11] 40 loss = 0.00206746, mse = 0.00688181
+[2024-10-07 14:46:23] 50 loss = 0.00056301, mse = 0.00252149
+[2024-10-07 14:46:35] 60 loss = 0.00016441, mse = 0.00099313
+[2024-10-07 14:46:48] 70 loss = 0.00005777, mse = 0.00048336
+[2024-10-07 14:47:01] 80 loss = 0.00002557, mse = 0.00026203
+[2024-10-07 14:47:11] 90 loss = 0.00001297, mse = 0.00014438
+[2024-10-07 14:47:22] 100 loss = 0.00000686, mse = 0.00007383
+[2024-10-07 14:47:34] 110 loss = 0.00000381, mse = 0.00003894
+[2024-10-07 14:47:46] 120 loss = 0.00000207, mse = 0.00001903
+[2024-10-07 14:47:58] 130 loss = 0.00000119, mse = 0.00001068
+[2024-10-07 14:48:05] 140 loss = 0.00000095, mse = 0.00000807
+imidx_list: [5127]
+loss_DLG: 3.29875479110342e-06 loss_iDLG: 9.47346052271314e-07
+mse_DLG: 2.1368643956520827e-06 mse_iDLG: 8.071205229498446e-06
+gt_label: [2399] lab_DLG: 2399 lab_iDLG: 2399
+----------------------
+
+
+running 9|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5853C40>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:48:07] 0 loss = 260.30090332, mse = 101.77571869
+[2024-10-07 14:48:20] 10 loss = 4.96202850, mse = 1.33460236
+[2024-10-07 14:48:33] 20 loss = 0.83719462, mse = 0.80352354
+[2024-10-07 14:48:46] 30 loss = 0.26362449, mse = 0.49427429
+[2024-10-07 14:48:59] 40 loss = 0.09751939, mse = 0.28536445
+[2024-10-07 14:49:13] 50 loss = 0.03603325, mse = 0.14659007
+[2024-10-07 14:49:24] 60 loss = 0.01269445, mse = 0.07069293
+[2024-10-07 14:49:36] 70 loss = 0.00432152, mse = 0.03401090
+[2024-10-07 14:49:48] 80 loss = 0.00156520, mse = 0.01623748
+[2024-10-07 14:49:59] 90 loss = 0.00061760, mse = 0.00704936
+[2024-10-07 14:50:10] 100 loss = 0.00024577, mse = 0.00314752
+[2024-10-07 14:50:21] 110 loss = 0.00010760, mse = 0.00143905
+[2024-10-07 14:50:32] 120 loss = 0.00004461, mse = 0.00057656
+[2024-10-07 14:50:43] 130 loss = 0.00002060, mse = 0.00027655
+[2024-10-07 14:50:53] 140 loss = 0.00001085, mse = 0.00014548
+[2024-10-07 14:51:06] 150 loss = 0.00000709, mse = 0.00008611
+[2024-10-07 14:51:19] 160 loss = 0.00000484, mse = 0.00004935
+[2024-10-07 14:51:28] 170 loss = 0.00000392, mse = 0.00003497
+[2024-10-07 14:51:37] 180 loss = 0.00000335, mse = 0.00002666
+[2024-10-07 14:51:44] 190 loss = 0.00000298, mse = 0.00002157
+[2024-10-07 14:51:49] 200 loss = 0.00000283, mse = 0.00001925
+[2024-10-07 14:51:53] 210 loss = 0.00000271, mse = 0.00001795
+[2024-10-07 14:51:57] 220 loss = 0.00000265, mse = 0.00001686
+[2024-10-07 14:52:02] 230 loss = 0.00000254, mse = 0.00001562
+[2024-10-07 14:52:06] 240 loss = 0.00000243, mse = 0.00001411
+[2024-10-07 14:52:11] 250 loss = 0.00000236, mse = 0.00001338
+[2024-10-07 14:52:13] 260 loss = 0.00000234, mse = 0.00001313
+[2024-10-07 14:52:15] 270 loss = 0.00000234, mse = 0.00001313
+[2024-10-07 14:52:17] 280 loss = 0.00000234, mse = 0.00001313
+[2024-10-07 14:52:19] 290 loss = 0.00000234, mse = 0.00001313
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D956B820>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:52:22] 0 loss = 20.19345474, mse = 1.06974232
+[2024-10-07 14:52:34] 10 loss = 0.57110977, mse = 0.42610118
+[2024-10-07 14:52:46] 20 loss = 0.08686999, mse = 0.16640118
+[2024-10-07 14:52:59] 30 loss = 0.01794205, mse = 0.06336854
+[2024-10-07 14:53:12] 40 loss = 0.00496357, mse = 0.02691931
+[2024-10-07 14:53:25] 50 loss = 0.00140857, mse = 0.01069031
+[2024-10-07 14:53:37] 60 loss = 0.00045892, mse = 0.00471867
+[2024-10-07 14:53:49] 70 loss = 0.00017751, mse = 0.00220067
+[2024-10-07 14:53:59] 80 loss = 0.00006780, mse = 0.00103585
+[2024-10-07 14:54:09] 90 loss = 0.00003007, mse = 0.00058166
+[2024-10-07 14:54:20] 100 loss = 0.00001510, mse = 0.00036074
+[2024-10-07 14:54:33] 110 loss = 0.00000823, mse = 0.00022515
+[2024-10-07 14:54:45] 120 loss = 0.00000501, mse = 0.00014977
+[2024-10-07 14:54:58] 130 loss = 0.00000321, mse = 0.00009910
+[2024-10-07 14:55:09] 140 loss = 0.00000212, mse = 0.00006741
+[2024-10-07 14:55:22] 150 loss = 0.00000144, mse = 0.00004545
+[2024-10-07 14:55:32] 160 loss = 0.00000103, mse = 0.00003179
+[2024-10-07 14:55:38] 170 loss = 0.00000087, mse = 0.00002661
+imidx_list: [5898]
+loss_DLG: 2.342710558878025e-06 loss_iDLG: 8.715528565517161e-07
+mse_DLG: 1.313473785558017e-05 mse_iDLG: 2.661118378455285e-05
+gt_label: [2732] lab_DLG: 2732 lab_iDLG: 2732
+----------------------
+
+
+running 10|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D561EFA0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:55:40] 0 loss = 86.59394073, mse = 2.30957985
+[2024-10-07 14:55:53] 10 loss = 1.97664475, mse = 0.68067223
+[2024-10-07 14:56:07] 20 loss = 0.14842513, mse = 0.21269460
+[2024-10-07 14:56:21] 30 loss = 0.02489562, mse = 0.08927069
+[2024-10-07 14:56:35] 40 loss = 0.00652827, mse = 0.03865216
+[2024-10-07 14:56:50] 50 loss = 0.00198762, mse = 0.01636030
+[2024-10-07 14:57:03] 60 loss = 0.00066143, mse = 0.00613741
+[2024-10-07 14:57:15] 70 loss = 0.00022842, mse = 0.00233977
+[2024-10-07 14:57:27] 80 loss = 0.00008721, mse = 0.00094869
+[2024-10-07 14:57:40] 90 loss = 0.00003514, mse = 0.00039434
+[2024-10-07 14:57:51] 100 loss = 0.00001595, mse = 0.00018017
+[2024-10-07 14:58:01] 110 loss = 0.00000867, mse = 0.00009419
+[2024-10-07 14:58:12] 120 loss = 0.00000520, mse = 0.00004774
+[2024-10-07 14:58:22] 130 loss = 0.00000413, mse = 0.00003293
+[2024-10-07 14:58:28] 140 loss = 0.00000366, mse = 0.00002622
+[2024-10-07 14:58:34] 150 loss = 0.00000332, mse = 0.00002106
+[2024-10-07 14:58:39] 160 loss = 0.00000311, mse = 0.00001790
+[2024-10-07 14:58:44] 170 loss = 0.00000290, mse = 0.00001501
+[2024-10-07 14:58:47] 180 loss = 0.00000281, mse = 0.00001380
+[2024-10-07 14:58:51] 190 loss = 0.00000268, mse = 0.00001193
+[2024-10-07 14:58:55] 200 loss = 0.00000258, mse = 0.00001067
+[2024-10-07 14:59:00] 210 loss = 0.00000244, mse = 0.00000886
+[2024-10-07 14:59:04] 220 loss = 0.00000234, mse = 0.00000786
+[2024-10-07 14:59:08] 230 loss = 0.00000228, mse = 0.00000717
+[2024-10-07 14:59:12] 240 loss = 0.00000221, mse = 0.00000653
+[2024-10-07 14:59:15] 250 loss = 0.00000217, mse = 0.00000603
+[2024-10-07 14:59:18] 260 loss = 0.00000216, mse = 0.00000593
+[2024-10-07 14:59:20] 270 loss = 0.00000216, mse = 0.00000593
+[2024-10-07 14:59:22] 280 loss = 0.00000216, mse = 0.00000593
+[2024-10-07 14:59:24] 290 loss = 0.00000216, mse = 0.00000593
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4C8A0A0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 14:59:27] 0 loss = 33.47243500, mse = 1.18161309
+[2024-10-07 14:59:39] 10 loss = 0.56330830, mse = 0.35066581
+[2024-10-07 14:59:51] 20 loss = 0.04630830, mse = 0.11849455
+[2024-10-07 15:00:03] 30 loss = 0.01021008, mse = 0.05387888
+[2024-10-07 15:00:16] 40 loss = 0.00305117, mse = 0.02331634
+[2024-10-07 15:00:28] 50 loss = 0.00101805, mse = 0.00952569
+[2024-10-07 15:00:41] 60 loss = 0.00036782, mse = 0.00383656
+[2024-10-07 15:00:53] 70 loss = 0.00013343, mse = 0.00148084
+[2024-10-07 15:01:04] 80 loss = 0.00004714, mse = 0.00057013
+[2024-10-07 15:01:14] 90 loss = 0.00001985, mse = 0.00027000
+[2024-10-07 15:01:26] 100 loss = 0.00000818, mse = 0.00011385
+[2024-10-07 15:01:37] 110 loss = 0.00000358, mse = 0.00005360
+[2024-10-07 15:01:48] 120 loss = 0.00000174, mse = 0.00002556
+[2024-10-07 15:01:59] 130 loss = 0.00000091, mse = 0.00001388
+imidx_list: [10656]
+loss_DLG: 2.1595769794657826e-06 loss_iDLG: 9.140955512521032e-07
+mse_DLG: 5.932834028499201e-06 mse_iDLG: 1.3884372492611874e-05
+gt_label: [4762] lab_DLG: 4762 lab_iDLG: 4762
+----------------------
+
+
+running 11|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4F73250>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:02:01] 0 loss = 390.90774536, mse = 2.98546982
+[2024-10-07 15:02:14] 10 loss = 5.04716349, mse = 1.21264744
+[2024-10-07 15:02:27] 20 loss = 1.27893221, mse = 0.67002755
+[2024-10-07 15:02:40] 30 loss = 0.28695244, mse = 0.25667185
+[2024-10-07 15:02:55] 40 loss = 0.05432390, mse = 0.07996512
+[2024-10-07 15:03:10] 50 loss = 0.00825791, mse = 0.01989837
+[2024-10-07 15:03:23] 60 loss = 0.00166738, mse = 0.00660832
+[2024-10-07 15:03:36] 70 loss = 0.00042784, mse = 0.00200464
+[2024-10-07 15:03:49] 80 loss = 0.00012849, mse = 0.00065685
+[2024-10-07 15:04:03] 90 loss = 0.00003673, mse = 0.00018560
+[2024-10-07 15:04:15] 100 loss = 0.00001114, mse = 0.00005528
+[2024-10-07 15:04:26] 110 loss = 0.00000303, mse = 0.00001469
+[2024-10-07 15:04:38] 120 loss = 0.00000087, mse = 0.00000444
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D9046FD0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:04:39] 0 loss = 29.27253723, mse = 1.05775523
+[2024-10-07 15:04:52] 10 loss = 0.72401673, mse = 0.26432994
+[2024-10-07 15:05:04] 20 loss = 0.04855254, mse = 0.05882379
+[2024-10-07 15:05:17] 30 loss = 0.00698741, mse = 0.01827676
+[2024-10-07 15:05:29] 40 loss = 0.00139754, mse = 0.00560963
+[2024-10-07 15:05:42] 50 loss = 0.00036607, mse = 0.00209914
+[2024-10-07 15:05:52] 60 loss = 0.00011485, mse = 0.00080679
+[2024-10-07 15:06:03] 70 loss = 0.00004033, mse = 0.00033296
+[2024-10-07 15:06:13] 80 loss = 0.00001561, mse = 0.00014497
+[2024-10-07 15:06:24] 90 loss = 0.00000634, mse = 0.00006835
+[2024-10-07 15:06:34] 100 loss = 0.00000289, mse = 0.00003283
+[2024-10-07 15:06:45] 110 loss = 0.00000140, mse = 0.00001499
+[2024-10-07 15:06:55] 120 loss = 0.00000072, mse = 0.00000735
+imidx_list: [234]
+loss_DLG: 8.691905009072798e-07 loss_iDLG: 7.190877227003512e-07
+mse_DLG: 4.444807473191759e-06 mse_iDLG: 7.350625764956931e-06
+gt_label: [143] lab_DLG: 143 lab_iDLG: 143
+----------------------
+
+
+running 12|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4AE85B0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:06:57] 0 loss = 133.33993530, mse = 1.72406864
+[2024-10-07 15:07:11] 10 loss = 2.05960321, mse = 0.51160592
+[2024-10-07 15:07:26] 20 loss = 0.27315101, mse = 0.19660360
+[2024-10-07 15:07:40] 30 loss = 0.03927252, mse = 0.07047155
+[2024-10-07 15:07:55] 40 loss = 0.00922095, mse = 0.02937602
+[2024-10-07 15:08:09] 50 loss = 0.00272281, mse = 0.01214822
+[2024-10-07 15:08:23] 60 loss = 0.00090221, mse = 0.00510179
+[2024-10-07 15:08:37] 70 loss = 0.00037637, mse = 0.00234069
+[2024-10-07 15:08:52] 80 loss = 0.00015935, mse = 0.00101472
+[2024-10-07 15:09:05] 90 loss = 0.00007090, mse = 0.00045978
+[2024-10-07 15:09:19] 100 loss = 0.00003740, mse = 0.00023138
+[2024-10-07 15:09:34] 110 loss = 0.00002268, mse = 0.00012846
+[2024-10-07 15:09:49] 120 loss = 0.00001470, mse = 0.00007190
+[2024-10-07 15:10:02] 130 loss = 0.00001073, mse = 0.00004462
+[2024-10-07 15:10:13] 140 loss = 0.00000896, mse = 0.00003250
+[2024-10-07 15:10:24] 150 loss = 0.00000778, mse = 0.00002418
+[2024-10-07 15:10:31] 160 loss = 0.00000722, mse = 0.00002066
+[2024-10-07 15:10:40] 170 loss = 0.00000659, mse = 0.00001648
+[2024-10-07 15:10:46] 180 loss = 0.00000632, mse = 0.00001495
+[2024-10-07 15:10:55] 190 loss = 0.00000586, mse = 0.00001227
+[2024-10-07 15:11:02] 200 loss = 0.00000560, mse = 0.00001088
+[2024-10-07 15:11:07] 210 loss = 0.00000549, mse = 0.00001036
+[2024-10-07 15:11:12] 220 loss = 0.00000535, mse = 0.00000946
+[2024-10-07 15:11:15] 230 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:17] 240 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:19] 250 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:21] 260 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:24] 270 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:26] 280 loss = 0.00000533, mse = 0.00000945
+[2024-10-07 15:11:28] 290 loss = 0.00000533, mse = 0.00000945
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D514A610>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:11:31] 0 loss = 48.44872665, mse = 1.11185002
+[2024-10-07 15:11:43] 10 loss = 1.58729589, mse = 0.51091808
+[2024-10-07 15:11:56] 20 loss = 0.25526467, mse = 0.21387959
+[2024-10-07 15:12:08] 30 loss = 0.04413376, mse = 0.08611500
+[2024-10-07 15:12:21] 40 loss = 0.01083829, mse = 0.03574177
+[2024-10-07 15:12:34] 50 loss = 0.00325196, mse = 0.01540779
+[2024-10-07 15:12:47] 60 loss = 0.00115672, mse = 0.00705798
+[2024-10-07 15:13:00] 70 loss = 0.00050310, mse = 0.00355763
+[2024-10-07 15:13:12] 80 loss = 0.00022146, mse = 0.00162113
+[2024-10-07 15:13:25] 90 loss = 0.00010085, mse = 0.00078101
+[2024-10-07 15:13:38] 100 loss = 0.00004900, mse = 0.00039316
+[2024-10-07 15:13:52] 110 loss = 0.00002641, mse = 0.00022046
+[2024-10-07 15:14:04] 120 loss = 0.00001488, mse = 0.00013288
+[2024-10-07 15:14:16] 130 loss = 0.00000971, mse = 0.00008656
+[2024-10-07 15:14:29] 140 loss = 0.00000639, mse = 0.00005701
+[2024-10-07 15:14:42] 150 loss = 0.00000447, mse = 0.00004040
+[2024-10-07 15:14:54] 160 loss = 0.00000314, mse = 0.00002777
+[2024-10-07 15:15:06] 170 loss = 0.00000247, mse = 0.00002172
+[2024-10-07 15:15:15] 180 loss = 0.00000208, mse = 0.00001806
+[2024-10-07 15:15:22] 190 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:24] 200 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:26] 210 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:28] 220 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:30] 230 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:32] 240 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:34] 250 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:36] 260 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:38] 270 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:40] 280 loss = 0.00000183, mse = 0.00001593
+[2024-10-07 15:15:42] 290 loss = 0.00000183, mse = 0.00001593
+imidx_list: [5291]
+loss_DLG: 5.327113740349887e-06 loss_iDLG: 1.8320220078749117e-06
+mse_DLG: 9.452373888052534e-06 mse_iDLG: 1.5927185813779943e-05
+gt_label: [2455] lab_DLG: 2455 lab_iDLG: 2455
+----------------------
+
+
+running 13|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D91F9F40>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:15:46] 0 loss = 276.97958374, mse = 1.27541900
+[2024-10-07 15:15:51] 10 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:52] 20 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:54] 30 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:55] 40 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:56] 50 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:58] 60 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:15:59] 70 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:01] 80 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:02] 90 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:04] 100 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:05] 110 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:07] 120 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:08] 130 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:10] 140 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:11] 150 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:13] 160 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:15] 170 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:16] 180 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:18] 190 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:20] 200 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:22] 210 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:24] 220 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:26] 230 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:28] 240 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:30] 250 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:32] 260 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:34] 270 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:36] 280 loss = 335.66146851, mse = 10721257351806976.00000000
+[2024-10-07 15:16:38] 290 loss = 335.66146851, mse = 10721257351806976.00000000
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D91F9880>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:16:41] 0 loss = 31.49652863, mse = 1.10578775
+[2024-10-07 15:16:54] 10 loss = 1.01648343, mse = 0.41891703
+[2024-10-07 15:17:06] 20 loss = 0.09589577, mse = 0.13593315
+[2024-10-07 15:17:19] 30 loss = 0.01698400, mse = 0.04872876
+[2024-10-07 15:17:32] 40 loss = 0.00460976, mse = 0.01898774
+[2024-10-07 15:17:45] 50 loss = 0.00130122, mse = 0.00685448
+[2024-10-07 15:17:57] 60 loss = 0.00043659, mse = 0.00288547
+[2024-10-07 15:18:07] 70 loss = 0.00016117, mse = 0.00126709
+[2024-10-07 15:18:18] 80 loss = 0.00006405, mse = 0.00059692
+[2024-10-07 15:18:28] 90 loss = 0.00002933, mse = 0.00031385
+[2024-10-07 15:18:41] 100 loss = 0.00001443, mse = 0.00017304
+[2024-10-07 15:18:54] 110 loss = 0.00000867, mse = 0.00010882
+[2024-10-07 15:19:07] 120 loss = 0.00000559, mse = 0.00006938
+[2024-10-07 15:19:20] 130 loss = 0.00000317, mse = 0.00003692
+[2024-10-07 15:19:31] 140 loss = 0.00000208, mse = 0.00002307
+[2024-10-07 15:19:42] 150 loss = 0.00000136, mse = 0.00001530
+[2024-10-07 15:19:49] 160 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:50] 170 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:52] 180 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:54] 190 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:56] 200 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:57] 210 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:19:59] 220 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:01] 230 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:03] 240 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:05] 250 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:07] 260 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:09] 270 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:11] 280 loss = 0.00000111, mse = 0.00001231
+[2024-10-07 15:20:13] 290 loss = 0.00000111, mse = 0.00001231
+imidx_list: [10186]
+loss_DLG: 335.6614685058594 loss_iDLG: 1.1102307553301216e-06
+mse_DLG: 1.0721257351806976e+16 mse_iDLG: 1.2310728379816283e-05
+gt_label: [4582] lab_DLG: 4582 lab_iDLG: 4582
+----------------------
+
+
+running 14|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D57352E0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:20:16] 0 loss = 232.62265015, mse = 1.97787905
+[2024-10-07 15:20:30] 10 loss = 1.00598407, mse = 0.74155873
+[2024-10-07 15:20:41] 20 loss = 0.18067923, mse = 0.37422046
+[2024-10-07 15:20:52] 30 loss = 0.04799344, mse = 0.17384629
+[2024-10-07 15:21:03] 40 loss = 0.01080423, mse = 0.07299495
+[2024-10-07 15:21:16] 50 loss = 0.00307908, mse = 0.03605552
+[2024-10-07 15:21:29] 60 loss = 0.00107112, mse = 0.01749321
+[2024-10-07 15:21:42] 70 loss = 0.00044221, mse = 0.00927116
+[2024-10-07 15:21:55] 80 loss = 0.00020145, mse = 0.00500095
+[2024-10-07 15:22:08] 90 loss = 0.00009321, mse = 0.00271214
+[2024-10-07 15:22:21] 100 loss = 0.00004781, mse = 0.00162532
+[2024-10-07 15:22:35] 110 loss = 0.00002710, mse = 0.00107028
+[2024-10-07 15:22:48] 120 loss = 0.00001609, mse = 0.00070810
+[2024-10-07 15:23:00] 130 loss = 0.00001059, mse = 0.00051635
+[2024-10-07 15:23:11] 140 loss = 0.00000764, mse = 0.00039628
+[2024-10-07 15:23:20] 150 loss = 0.00000600, mse = 0.00032154
+[2024-10-07 15:23:30] 160 loss = 0.00000505, mse = 0.00027264
+[2024-10-07 15:23:39] 170 loss = 0.00000430, mse = 0.00022773
+[2024-10-07 15:23:46] 180 loss = 0.00000390, mse = 0.00020567
+[2024-10-07 15:23:52] 190 loss = 0.00000373, mse = 0.00019625
+[2024-10-07 15:23:54] 200 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:23:56] 210 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:23:57] 220 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:23:59] 230 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:01] 240 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:03] 250 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:05] 260 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:07] 270 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:09] 280 loss = 0.00000371, mse = 0.00019571
+[2024-10-07 15:24:11] 290 loss = 0.00000371, mse = 0.00019571
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4E59BE0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:24:14] 0 loss = 22.36712456, mse = 1.23471725
+[2024-10-07 15:24:27] 10 loss = 0.49838674, mse = 0.53349566
+[2024-10-07 15:24:39] 20 loss = 0.08614625, mse = 0.25553858
+[2024-10-07 15:24:52] 30 loss = 0.01984877, mse = 0.12073585
+[2024-10-07 15:25:05] 40 loss = 0.00619402, mse = 0.05527892
+[2024-10-07 15:25:15] 50 loss = 0.00186153, mse = 0.02437597
+[2024-10-07 15:25:26] 60 loss = 0.00067110, mse = 0.01234890
+[2024-10-07 15:25:38] 70 loss = 0.00028044, mse = 0.00649920
+[2024-10-07 15:25:51] 80 loss = 0.00012713, mse = 0.00372134
+[2024-10-07 15:26:01] 90 loss = 0.00006472, mse = 0.00224009
+[2024-10-07 15:26:12] 100 loss = 0.00003614, mse = 0.00143743
+[2024-10-07 15:26:23] 110 loss = 0.00002177, mse = 0.00094665
+[2024-10-07 15:26:34] 120 loss = 0.00001291, mse = 0.00059534
+[2024-10-07 15:26:44] 130 loss = 0.00000829, mse = 0.00039558
+[2024-10-07 15:26:55] 140 loss = 0.00000548, mse = 0.00028070
+[2024-10-07 15:27:07] 150 loss = 0.00000381, mse = 0.00019959
+[2024-10-07 15:27:20] 160 loss = 0.00000285, mse = 0.00014900
+[2024-10-07 15:27:28] 170 loss = 0.00000240, mse = 0.00012636
+[2024-10-07 15:27:37] 180 loss = 0.00000199, mse = 0.00010534
+[2024-10-07 15:27:42] 190 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:43] 200 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:45] 210 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:47] 220 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:49] 230 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:50] 240 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:52] 250 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:54] 260 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:56] 270 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:27:58] 280 loss = 0.00000183, mse = 0.00009752
+[2024-10-07 15:28:00] 290 loss = 0.00000183, mse = 0.00009752
+imidx_list: [7210]
+loss_DLG: 3.707528549057315e-06 loss_iDLG: 1.827398591558449e-06
+mse_DLG: 0.000195705026271753 mse_iDLG: 9.751890320330858e-05
+gt_label: [3226] lab_DLG: 3226 lab_iDLG: 3226
+----------------------
+
+
+running 15|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4E56F2130>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:28:03] 0 loss = 383.87484741, mse = 1.15820944
+[2024-10-07 15:28:11] 10 loss = 341.23831177, mse = 11817011.00000000
+[2024-10-07 15:28:14] 20 loss = 341.23828125, mse = 11817315.00000000
+[2024-10-07 15:28:17] 30 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:18] 40 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:20] 50 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:21] 60 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:22] 70 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:23] 80 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:25] 90 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:26] 100 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:28] 110 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:29] 120 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:30] 130 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:32] 140 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:33] 150 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:35] 160 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:36] 170 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:38] 180 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:39] 190 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:41] 200 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:43] 210 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:44] 220 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:46] 230 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:48] 240 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:49] 250 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:51] 260 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:53] 270 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:55] 280 loss = 1049.18054199, mse = 103425287127040.00000000
+[2024-10-07 15:28:57] 290 loss = 1049.18054199, mse = 103425287127040.00000000
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4F4EAC0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:29:00] 0 loss = 193.42407227, mse = 23.46392632
+[2024-10-07 15:29:12] 10 loss = 123.39965057, mse = 24.47384834
+[2024-10-07 15:29:25] 20 loss = 98.30329895, mse = 25.41084480
+[2024-10-07 15:29:37] 30 loss = 85.28510284, mse = 27.71361732
+[2024-10-07 15:29:48] 40 loss = 63.70827103, mse = 30.73825073
+[2024-10-07 15:30:01] 50 loss = 49.93153000, mse = 31.72093010
+[2024-10-07 15:30:13] 60 loss = 44.75812149, mse = 34.83357620
+[2024-10-07 15:30:26] 70 loss = 40.83645630, mse = 38.41413498
+[2024-10-07 15:30:38] 80 loss = 37.35549927, mse = 41.39701080
+[2024-10-07 15:30:51] 90 loss = 34.56356430, mse = 44.59154892
+[2024-10-07 15:31:04] 100 loss = 31.98423004, mse = 47.24164963
+[2024-10-07 15:31:17] 110 loss = 30.23005676, mse = 49.89033127
+[2024-10-07 15:31:30] 120 loss = 28.95685577, mse = 51.91062546
+[2024-10-07 15:31:43] 130 loss = 27.92980003, mse = 53.85419083
+[2024-10-07 15:31:54] 140 loss = 26.63665199, mse = 55.64451599
+[2024-10-07 15:32:06] 150 loss = 25.81381989, mse = 57.93083572
+[2024-10-07 15:32:19] 160 loss = 24.97085953, mse = 60.33446884
+[2024-10-07 15:32:32] 170 loss = 24.27172661, mse = 62.75701523
+[2024-10-07 15:32:44] 180 loss = 23.64818954, mse = 64.97466278
+[2024-10-07 15:32:57] 190 loss = 23.16614723, mse = 67.08643341
+[2024-10-07 15:33:09] 200 loss = 22.18595886, mse = 69.35073853
+[2024-10-07 15:33:21] 210 loss = 21.32005882, mse = 71.02114868
+[2024-10-07 15:33:32] 220 loss = 20.81204987, mse = 72.63579559
+[2024-10-07 15:33:45] 230 loss = 20.36684418, mse = 74.01093292
+[2024-10-07 15:33:57] 240 loss = 19.97744751, mse = 75.22357941
+[2024-10-07 15:34:09] 250 loss = 19.65373611, mse = 76.54311371
+[2024-10-07 15:34:21] 260 loss = 19.29567146, mse = 78.22753906
+[2024-10-07 15:34:32] 270 loss = 18.91385269, mse = 79.85909271
+[2024-10-07 15:34:45] 280 loss = 18.56060600, mse = 81.82195282
+[2024-10-07 15:34:58] 290 loss = 18.19510651, mse = 83.30811310
+imidx_list: [12225]
+loss_DLG: 1049.1805419921875 loss_iDLG: 17.92249298095703
+mse_DLG: 103425287127040.0 mse_iDLG: 84.44649505615234
+gt_label: [5496] lab_DLG: 145 lab_iDLG: 5496
+----------------------
+
+
+running 16|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5422AC0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:35:10] 0 loss = 389.30044556, mse = 1.26474345
+[2024-10-07 15:35:22] 10 loss = 16.12964821, mse = 1.63334942
+[2024-10-07 15:35:34] 20 loss = 3.19141483, mse = 0.94301480
+[2024-10-07 15:35:47] 30 loss = 0.98577893, mse = 0.56195509
+[2024-10-07 15:36:01] 40 loss = 0.25499696, mse = 0.26014712
+[2024-10-07 15:36:15] 50 loss = 0.06122686, mse = 0.10926110
+[2024-10-07 15:36:30] 60 loss = 0.01515568, mse = 0.04005063
+[2024-10-07 15:36:41] 70 loss = 0.00397812, mse = 0.01504790
+[2024-10-07 15:36:52] 80 loss = 0.00133627, mse = 0.00687239
+[2024-10-07 15:37:02] 90 loss = 0.00050350, mse = 0.00320431
+[2024-10-07 15:37:15] 100 loss = 0.00022011, mse = 0.00163133
+[2024-10-07 15:37:28] 110 loss = 0.00010733, mse = 0.00088243
+[2024-10-07 15:37:41] 120 loss = 0.00006450, mse = 0.00053008
+[2024-10-07 15:37:54] 130 loss = 0.00003873, mse = 0.00030906
+[2024-10-07 15:38:05] 140 loss = 0.00002546, mse = 0.00019138
+[2024-10-07 15:38:18] 150 loss = 0.00001769, mse = 0.00012202
+[2024-10-07 15:38:32] 160 loss = 0.00001282, mse = 0.00007664
+[2024-10-07 15:38:44] 170 loss = 0.00001005, mse = 0.00005259
+[2024-10-07 15:38:52] 180 loss = 0.00000904, mse = 0.00004362
+[2024-10-07 15:39:03] 190 loss = 0.00000775, mse = 0.00003261
+[2024-10-07 15:39:11] 200 loss = 0.00000706, mse = 0.00002646
+[2024-10-07 15:39:20] 210 loss = 0.00000636, mse = 0.00002051
+[2024-10-07 15:39:27] 220 loss = 0.00000592, mse = 0.00001779
+[2024-10-07 15:39:34] 230 loss = 0.00000558, mse = 0.00001530
+[2024-10-07 15:39:39] 240 loss = 0.00000534, mse = 0.00001343
+[2024-10-07 15:39:46] 250 loss = 0.00000507, mse = 0.00001172
+[2024-10-07 15:39:54] 260 loss = 0.00000469, mse = 0.00000928
+[2024-10-07 15:39:59] 270 loss = 0.00000456, mse = 0.00000858
+[2024-10-07 15:40:03] 280 loss = 0.00000448, mse = 0.00000818
+[2024-10-07 15:40:10] 290 loss = 0.00000425, mse = 0.00000705
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4EFEB50>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:40:14] 0 loss = 116.22038269, mse = 1.26903594
+[2024-10-07 15:40:20] 10 loss = 307.77304077, mse = 1560413184.00000000
+[2024-10-07 15:40:21] 20 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:23] 30 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:25] 40 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:27] 50 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:28] 60 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:30] 70 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:32] 80 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:34] 90 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:36] 100 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:38] 110 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:40] 120 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:41] 130 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:43] 140 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:45] 150 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:47] 160 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:49] 170 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:52] 180 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:54] 190 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:56] 200 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:40:58] 210 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:00] 220 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:03] 230 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:05] 240 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:07] 250 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:10] 260 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:12] 270 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:14] 280 loss = 307.77304077, mse = 1560411776.00000000
+[2024-10-07 15:41:17] 290 loss = 307.77304077, mse = 1560411776.00000000
+imidx_list: [12744]
+loss_DLG: 4.202074705972336e-06 loss_iDLG: 307.7730407714844
+mse_DLG: 6.718104941683123e-06 mse_iDLG: 1560411776.0
+gt_label: [5703] lab_DLG: 5703 lab_iDLG: 5703
+----------------------
+
+
+running 17|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4F3FB50>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:41:20] 0 loss = 428.28555298, mse = 1.65472257
+[2024-10-07 15:41:33] 10 loss = 3.24433184, mse = 0.92391247
+[2024-10-07 15:41:47] 20 loss = 0.60721898, mse = 0.55206996
+[2024-10-07 15:42:01] 30 loss = 0.17933203, mse = 0.32398996
+[2024-10-07 15:42:14] 40 loss = 0.06171517, mse = 0.17904420
+[2024-10-07 15:42:28] 50 loss = 0.02253775, mse = 0.09416938
+[2024-10-07 15:42:42] 60 loss = 0.00777899, mse = 0.04956076
+[2024-10-07 15:42:56] 70 loss = 0.00296503, mse = 0.02730899
+[2024-10-07 15:43:11] 80 loss = 0.00122239, mse = 0.01562258
+[2024-10-07 15:43:24] 90 loss = 0.00059728, mse = 0.00968468
+[2024-10-07 15:43:38] 100 loss = 0.00033812, mse = 0.00615656
+[2024-10-07 15:43:52] 110 loss = 0.00018903, mse = 0.00364076
+[2024-10-07 15:44:05] 120 loss = 0.00011014, mse = 0.00224566
+[2024-10-07 15:44:20] 130 loss = 0.00006657, mse = 0.00139181
+[2024-10-07 15:44:32] 140 loss = 0.00004422, mse = 0.00091247
+[2024-10-07 15:44:47] 150 loss = 0.00002735, mse = 0.00053776
+[2024-10-07 15:45:03] 160 loss = 0.00001782, mse = 0.00034405
+[2024-10-07 15:45:14] 170 loss = 0.00001277, mse = 0.00024053
+[2024-10-07 15:45:27] 180 loss = 0.00000923, mse = 0.00016745
+[2024-10-07 15:45:38] 190 loss = 0.00000747, mse = 0.00013048
+[2024-10-07 15:45:47] 200 loss = 0.00000651, mse = 0.00011059
+[2024-10-07 15:45:58] 210 loss = 0.00000550, mse = 0.00008514
+[2024-10-07 15:46:07] 220 loss = 0.00000493, mse = 0.00007347
+[2024-10-07 15:46:17] 230 loss = 0.00000433, mse = 0.00005978
+[2024-10-07 15:46:24] 240 loss = 0.00000401, mse = 0.00005267
+[2024-10-07 15:46:30] 250 loss = 0.00000383, mse = 0.00004884
+[2024-10-07 15:46:35] 260 loss = 0.00000368, mse = 0.00004546
+[2024-10-07 15:46:41] 270 loss = 0.00000354, mse = 0.00004243
+[2024-10-07 15:46:47] 280 loss = 0.00000333, mse = 0.00003831
+[2024-10-07 15:46:52] 290 loss = 0.00000321, mse = 0.00003569
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D4EE84F0>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:46:58] 0 loss = 43.55910873, mse = 1.20473015
+[2024-10-07 15:47:11] 10 loss = 1.31022823, mse = 0.57714725
+[2024-10-07 15:47:23] 20 loss = 0.18632020, mse = 0.27090967
+[2024-10-07 15:47:35] 30 loss = 0.03947828, mse = 0.13012774
+[2024-10-07 15:47:48] 40 loss = 0.01262157, mse = 0.06737591
+[2024-10-07 15:47:59] 50 loss = 0.00487748, mse = 0.03669901
+[2024-10-07 15:48:11] 60 loss = 0.00182548, mse = 0.01819046
+[2024-10-07 15:48:21] 70 loss = 0.00080366, mse = 0.00934897
+[2024-10-07 15:48:33] 80 loss = 0.00036821, mse = 0.00468168
+[2024-10-07 15:48:45] 90 loss = 0.00017193, mse = 0.00257565
+[2024-10-07 15:48:58] 100 loss = 0.00008674, mse = 0.00154563
+[2024-10-07 15:49:11] 110 loss = 0.00005089, mse = 0.00102219
+[2024-10-07 15:49:24] 120 loss = 0.00003238, mse = 0.00070007
+[2024-10-07 15:49:36] 130 loss = 0.00002119, mse = 0.00046471
+[2024-10-07 15:49:48] 140 loss = 0.00001413, mse = 0.00030396
+[2024-10-07 15:50:01] 150 loss = 0.00000926, mse = 0.00020239
+[2024-10-07 15:50:13] 160 loss = 0.00000623, mse = 0.00013620
+[2024-10-07 15:50:23] 170 loss = 0.00000468, mse = 0.00010348
+[2024-10-07 15:50:32] 180 loss = 0.00000390, mse = 0.00008775
+[2024-10-07 15:50:44] 190 loss = 0.00000310, mse = 0.00006930
+[2024-10-07 15:50:54] 200 loss = 0.00000260, mse = 0.00005890
+[2024-10-07 15:51:00] 210 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:02] 220 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:04] 230 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:06] 240 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:08] 250 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:10] 260 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:12] 270 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:14] 280 loss = 0.00000238, mse = 0.00005320
+[2024-10-07 15:51:16] 290 loss = 0.00000238, mse = 0.00005320
+imidx_list: [12979]
+loss_DLG: 3.087129925916088e-06 loss_iDLG: 2.3823613446438685e-06
+mse_DLG: 3.298338924651034e-05 mse_iDLG: 5.319610863807611e-05
+gt_label: [5703] lab_DLG: 5703 lab_iDLG: 5703
+----------------------
+
+
+running 18|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5853F70>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:51:19] 0 loss = 314.08386230, mse = 1.39281178
+[2024-10-07 15:51:22] 10 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:23] 20 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:25] 30 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:26] 40 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:27] 50 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:28] 60 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:29] 70 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:30] 80 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:31] 90 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:33] 100 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:34] 110 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:35] 120 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:37] 130 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:38] 140 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:39] 150 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:41] 160 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:42] 170 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:44] 180 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:45] 190 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:47] 200 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:48] 210 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:50] 220 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:52] 230 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:53] 240 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:55] 250 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:57] 260 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:51:59] 270 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:52:00] 280 loss = 407.65393066, mse = 81236168.00000000
+[2024-10-07 15:52:02] 290 loss = 407.65393066, mse = 81236168.00000000
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D51B2340>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:52:05] 0 loss = 35.93354416, mse = 1.02774060
+[2024-10-07 15:52:15] 10 loss = 0.85914999, mse = 0.31232101
+[2024-10-07 15:52:25] 20 loss = 0.05267675, mse = 0.06656288
+[2024-10-07 15:52:35] 30 loss = 0.00778446, mse = 0.01797993
+[2024-10-07 15:52:46] 40 loss = 0.00145301, mse = 0.00473260
+[2024-10-07 15:52:56] 50 loss = 0.00032031, mse = 0.00120292
+[2024-10-07 15:53:06] 60 loss = 0.00007561, mse = 0.00039466
+[2024-10-07 15:53:16] 70 loss = 0.00002409, mse = 0.00015709
+[2024-10-07 15:53:26] 80 loss = 0.00000882, mse = 0.00007372
+[2024-10-07 15:53:37] 90 loss = 0.00000375, mse = 0.00004367
+[2024-10-07 15:53:47] 100 loss = 0.00000218, mse = 0.00003200
+[2024-10-07 15:53:55] 110 loss = 0.00000163, mse = 0.00002697
+[2024-10-07 15:54:00] 120 loss = 0.00000142, mse = 0.00002462
+[2024-10-07 15:54:05] 130 loss = 0.00000127, mse = 0.00002223
+[2024-10-07 15:54:07] 140 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:09] 150 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:10] 160 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:12] 170 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:13] 180 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:15] 190 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:16] 200 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:18] 210 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:20] 220 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:21] 230 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:23] 240 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:25] 250 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:27] 260 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:28] 270 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:30] 280 loss = 0.00000123, mse = 0.00002217
+[2024-10-07 15:54:32] 290 loss = 0.00000123, mse = 0.00002217
+imidx_list: [11721]
+loss_DLG: 407.6539306640625 loss_iDLG: 1.2269528042452293e-06
+mse_DLG: 81236168.0 mse_iDLG: 2.217236760770902e-05
+gt_label: [5268] lab_DLG: 5268 lab_iDLG: 5268
+----------------------
+
+
+running 19|20 experiment
+DLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D5483220>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 15:54:35] 0 loss = nan, mse = nan
+[2024-10-07 15:54:45] 10 loss = nan, mse = nan
+[2024-10-07 15:54:54] 20 loss = nan, mse = nan
+[2024-10-07 15:55:05] 30 loss = nan, mse = nan
+[2024-10-07 15:55:15] 40 loss = nan, mse = nan
+[2024-10-07 15:55:25] 50 loss = nan, mse = nan
+[2024-10-07 15:55:36] 60 loss = nan, mse = nan
+[2024-10-07 15:55:47] 70 loss = nan, mse = nan
+[2024-10-07 15:55:58] 80 loss = nan, mse = nan
+[2024-10-07 15:56:11] 90 loss = nan, mse = nan
+[2024-10-07 15:56:23] 100 loss = nan, mse = nan
+[2024-10-07 15:56:33] 110 loss = nan, mse = nan
+[2024-10-07 15:56:44] 120 loss = nan, mse = nan
+[2024-10-07 15:56:54] 130 loss = nan, mse = nan
+[2024-10-07 15:57:04] 140 loss = nan, mse = nan
+[2024-10-07 15:57:13] 150 loss = nan, mse = nan
+[2024-10-07 15:57:25] 160 loss = nan, mse = nan
+[2024-10-07 15:57:37] 170 loss = nan, mse = nan
+[2024-10-07 15:57:50] 180 loss = nan, mse = nan
+[2024-10-07 15:58:03] 190 loss = nan, mse = nan
+[2024-10-07 15:58:15] 200 loss = nan, mse = nan
+[2024-10-07 15:58:27] 210 loss = nan, mse = nan
+[2024-10-07 15:58:39] 220 loss = nan, mse = nan
+[2024-10-07 15:58:51] 230 loss = nan, mse = nan
+[2024-10-07 15:59:04] 240 loss = nan, mse = nan
+[2024-10-07 15:59:16] 250 loss = nan, mse = nan
+[2024-10-07 15:59:28] 260 loss = nan, mse = nan
+[2024-10-07 15:59:41] 270 loss = nan, mse = nan
+[2024-10-07 15:59:52] 280 loss = nan, mse = nan
+[2024-10-07 16:00:05] 290 loss = nan, mse = nan
+iDLG, Try to generate 1 images
+<PIL.Image.Image image mode=RGB size=32x32 at 0x7FA4D57DEF10>
+torch.Size([1, 3, 32, 32]) torch.Size([1])
+lr = 1.0
+[2024-10-07 16:00:18] 0 loss = 51.27640152, mse = 1.01405525
+[2024-10-07 16:00:30] 10 loss = 1.23965013, mse = 0.29740945
+[2024-10-07 16:00:43] 20 loss = 0.09048535, mse = 0.08034748
+[2024-10-07 16:00:56] 30 loss = 0.01472266, mse = 0.02704993
+[2024-10-07 16:01:07] 40 loss = 0.00373146, mse = 0.00998524
+[2024-10-07 16:01:19] 50 loss = 0.00109351, mse = 0.00399716
+[2024-10-07 16:01:30] 60 loss = 0.00037929, mse = 0.00162528
+[2024-10-07 16:01:42] 70 loss = 0.00013852, mse = 0.00067360
+[2024-10-07 16:01:54] 80 loss = 0.00005637, mse = 0.00030934
+[2024-10-07 16:02:05] 90 loss = 0.00002877, mse = 0.00016990
+[2024-10-07 16:02:18] 100 loss = 0.00001368, mse = 0.00008069
+[2024-10-07 16:02:31] 110 loss = 0.00000765, mse = 0.00004481
+[2024-10-07 16:02:44] 120 loss = 0.00000406, mse = 0.00002253
+[2024-10-07 16:02:57] 130 loss = 0.00000229, mse = 0.00001290
+[2024-10-07 16:03:08] 140 loss = 0.00000161, mse = 0.00000904
+[2024-10-07 16:03:20] 150 loss = 0.00000110, mse = 0.00000569
+[2024-10-07 16:03:28] 160 loss = 0.00000085, mse = 0.00000463
+imidx_list: [2070]
+loss_DLG: nan loss_iDLG: 8.51876279739372e-07
+mse_DLG: nan mse_iDLG: 4.633143817045493e-06
+gt_label: [1009] lab_DLG: 0 lab_iDLG: 1009
+----------------------
+
+
