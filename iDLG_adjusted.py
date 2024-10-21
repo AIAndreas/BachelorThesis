@@ -119,6 +119,9 @@ class MinMaxNormalize:
 
     def __call__(self, tensor):
         return (tensor - self.min_val) / (self.max_val - self.min_val + 1e-8)
+    
+    def reverse(self, normalized_tensor):
+        return normalized_tensor * (self.max_val - self.min_val + 1e-8) + self.min_val
 
 class Dataset_from_Image(Dataset):
     def __init__(self, imgs, labs, transform=None):
@@ -195,6 +198,12 @@ def adjust_learning_rate(optimizer, its, warmup_iterations=10):
         lr = 0.05
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr
+
+def export_data(data, dir):
+    np.save(dir, data)
+
+
+
 def main():
     dataset = 'audio_mnist'
     root_path = os.getcwd()
@@ -257,7 +266,8 @@ def main():
         # mean, std = compute_mean_std(dst)
         # transform = transforms.Compose([transforms.Normalize(mean=mean, std=std)])
         global_min, global_max = compute_global_min_max(dst)
-        transform = transforms.Compose([MinMaxNormalize(global_min, global_max)])
+        normalizer = MinMaxNormalize(global_min, global_max)
+        transform = transforms.Compose([normalizer])
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
 
@@ -374,7 +384,7 @@ def main():
                     print(current_time, iters, 'loss = %.8f, mse = %.8f' %(current_loss, mses[-1]))
 
 
-                if current_loss < 0.000001 and mses[-1] < 1: # converge
+                if current_loss < 0.000001: # converge
                     dummy_data_log = dummy_data
                     history.append([dummy_data_log[imidx].clone().detach().cpu().numpy() for imidx in range(num_dummy)])
                     history_iters.append(iters)
@@ -400,21 +410,20 @@ def main():
             #             plt.savefig('%s/iDLG_on_%s_%05d.png' % (save_path, imidx_list, imidx_list[imidx]))
             #             plt.close()
 
-            if method == 'DLG':
-                loss_DLG = losses
-                label_DLG = torch.argmax(dummy_label, dim=-1).detach().item()
-                mse_DLG = mses
-            elif method == 'iDLG':
-                loss_iDLG = losses
-                label_iDLG = label_pred.item()
-                mse_iDLG = mses
+    
+            
+            loss_iDLG = losses
+            label_iDLG = label_pred.item()
+            mse_iDLG = mses
+            save_path = "results_mat/iDLG_audio_mnist"
+            export_data(normalizer.reverse(dummy_data.detach().cpu().numpy()),'%s/iDLG_on_%s_%05d.npy' % (save_path, imidx_list, imidx_list[imidx]))
 
 
 
         print('imidx_list:', imidx_list)
         print('loss_iDLG:', loss_iDLG[-1])
-        print(, 'mse_iDLG:', mse_iDLG[-1])
-        print('gt_label:', gt_label.detach().cpu().data.numpy(), 'lab_DLG:', label_DLG, 'lab_iDLG:', label_iDLG)
+        print('mse_iDLG:', mse_iDLG[-1])
+        print('gt_label:', gt_label.detach().cpu().data.numpy(), 'lab_iDLG:', label_iDLG)
 
         print('----------------------\n\n')
 
