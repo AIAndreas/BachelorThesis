@@ -116,10 +116,12 @@ if num_exp == len(mse_iDLG):
     # Iterate through each mse value
     for i in range(len(mse_iDLG)):
 
+
         if mse_iDLG[i] > 0.01 and mse_iDLG[i] <=11 :
             above_thres_values_small.append(mse_iDLG[i])
         if mse_iDLG[i] > 11:
             above_thres_values_large.append(mse_iDLG[i])
+
 
         if mse_iDLG[i] <= 0.01:
             count_001_idlg += 1
@@ -150,6 +152,7 @@ if num_exp == len(mse_iDLG):
 # Now, fidelity_count_DLG and fidelity_count_iDLG contain the fidelity for each threshold
 
 print(fidelity_count_iDLG)
+
 
 print("Number of values (MSE) larger than 0.01 but smaller than 11:", len(above_thres_values_small))
 print("Number of values (MSE) larger than 11:", len(above_thres_values_large), ". Largest number:", max(above_thres_values_large))

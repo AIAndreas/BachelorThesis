@@ -8,7 +8,6 @@ num_exp = 1000
 dataset = "LFW"
 
 
-
 """
 if dataset == "LFW":
     with open('Output_error/output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
@@ -22,8 +21,13 @@ else:
     # Open and read the file
     with open("Output_error/output_lfw_exp1000.txt", "r") as file:
         content = file.read()
-
 """
+
+with open("Output_error/output_lfw_exp544_utf8_done.txt", "r") as file:
+    content = file.read()
+
+
+
 
 with open("Output_error/output_lfw_exp544_utf8_done.txt", "r") as file:
     content = file.read()
@@ -38,11 +42,8 @@ content = content[content.find(f"running 0|{num_exp} experiment"):]
 # Adjust this if there's a more specific marker
 parts = content.split('----------------------')
 
-print(parts[0])
-
 #remove empty last element
 parts = parts[:-1]
-
 
 ## LABEL ACCURACY 
 
