@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 num_exp = 1000
 dataset = "LFW"
 
+
+"""
 if dataset == "LFW":
     with open('Output_error/output_lfw_exp1000_utf8.txt', 'r', encoding='latin-1') as file:
         content = file.read()
@@ -15,20 +17,26 @@ else:
     # Open and read the file
     with open("Output_error/output_lfw_exp1000.txt", "r") as file:
         content = file.read()
+"""
+
+with open("Output_error/output_lfw_exp544_utf8_done.txt", "r") as file:
+    content = file.read()
+
 
 
 #cut first part of output 
 content = content[content.find(f"running 0|{num_exp} experiment"):]
 
+
+
 # Split the content at the first occurrence of '----------------------'
 # Adjust this if there's a more specific marker
 parts = content.split('----------------------')
 
-print(parts[0])
-
 #remove empty last element
 parts = parts[:-1]
 
+print(len(parts))
 ## LABEL ACCURACY 
 
 #count number of correct answers
@@ -36,7 +44,7 @@ gt_label_count = 0
 dlg_acc = 0
 idlg_acc = 0 
 
-for i in range(0,num_exp):
+for i in range(num_exp):
 
     gt_label_count += 1
 
@@ -55,8 +63,6 @@ for i in range(0,num_exp):
     if line[5] == line[1]:
         idlg_acc += 1
         
-
-
 
 print("Number of correct labels for dlg: ", dlg_acc, ". Accuracy (%): ", (dlg_acc/num_exp)*100)
 print("Number of correct labels for idlg: ", idlg_acc, ". Accuracy (%): ", (idlg_acc/num_exp)*100)
@@ -214,7 +220,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend(fontsize=15)
 
 # Show plot
-plt.show()
+#plt.show()
 
 
 
@@ -233,10 +239,9 @@ C = 0
 D = 0 
 
 for i in range(0,num_exp):
-
     gt_label = parts[i].find("gt_label:")
     end = parts[i].find("lab_iDLG") #+12
-    line = parts[i][gt_label:end+12]
+    line = parts[i][gt_label:end+15]
 
     # Split the line by whitespace or newlines
     line = re.split(r"[ \n\[\]]+", line)
