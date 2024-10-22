@@ -19,15 +19,18 @@ class LeNet(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 65, 25]),
+            nn.LayerNorm([12,133,363]),
+            # nn.LayerNorm([12, 65, 25]),
             # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 33, 13]),
+            nn.LayerNorm([12,67,182]),
+            # nn.LayerNorm([12, 33, 13]),
             # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
-            nn.LayerNorm([12, 33, 13]),
+            nn.LayerNorm([12,67,182]),
+            # nn.LayerNorm([12, 33, 13]),
             # nn.BatchNorm2d(12),
             act(),
         )
@@ -205,12 +208,12 @@ def export_data(data, dir):
 
 
 def main():
-    dataset = 'audio_mnist'
+    dataset = 'urbansound'
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
     
-    lr = 1
+    lr = 0.5
     num_dummy = 1
     Iteration = 300
     num_exp = 1000
@@ -270,6 +273,20 @@ def main():
         transform = transforms.Compose([normalizer])
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
+    elif dataset == 'urbansound':
+        shape_img = (265, 726)
+        num_classes = 10
+        channel = 1
+        hidden = 146328
+        data_path = os.path.join(root_path, 'data/audio/data_spec')
+        images_all, labels_all = audio_mnist_dataset(data_path, shape_img)
+        dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
+        # mean, std = compute_mean_std(dst)
+        # transform = transforms.Compose([transforms.Normalize(mean=mean, std=std)])
+        global_min, global_max = compute_global_min_max(dst)
+        normalizer = MinMaxNormalize(global_min, global_max)
+        transform = transforms.Compose([normalizer])
+        dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
     else:
         exit('unknown dataset')
