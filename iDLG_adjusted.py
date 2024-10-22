@@ -19,17 +19,17 @@ class LeNet(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12,133,363]),
+            nn.LayerNorm([12,513,93]),
             # nn.LayerNorm([12, 65, 25]),
             # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12,67,182]),
+            nn.LayerNorm([12,257,47]),
             # nn.LayerNorm([12, 33, 13]),
             # nn.BatchNorm2d(12),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
-            nn.LayerNorm([12,67,182]),
+            nn.LayerNorm([12,257,47]),
             # nn.LayerNorm([12, 33, 13]),
             # nn.BatchNorm2d(12),
             act(),
@@ -213,13 +213,13 @@ def main():
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
     
-    lr = 0.5
+    lr = 1
     num_dummy = 1
     Iteration = 300
-    num_exp = 1000
+    num_exp = 20
 
     use_cuda = torch.cuda.is_available()
-    #device = 'cuda' if use_cuda else 'cpu'
+    # device = 'cuda' if use_cuda else 'cpu'
     device = 'cpu'
     # tp = transforms.Compose([transforms.ToPILImage()])
 
@@ -274,10 +274,10 @@ def main():
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
     elif dataset == 'urbansound':
-        shape_img = (265, 726)
+        shape_img = (1025, 186)
         num_classes = 10
         channel = 1
-        hidden = 146328
+        hidden = 144948
         data_path = os.path.join(root_path, 'data/audio/data_spec')
         images_all, labels_all = audio_mnist_dataset(data_path, shape_img)
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
