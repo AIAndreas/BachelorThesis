@@ -11,12 +11,15 @@ class LeNet_mnist(nn.Module):
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
             nn.LayerNorm([12, 65, 25]),
+            # nn.LayerNorm([12, 129, 12]),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
             nn.LayerNorm([12, 33, 13]),
+            # nn.LayerNorm([12, 65, 6]),
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
             nn.LayerNorm([12, 33, 13]),
+            # nn.LayerNorm([12, 65, 6]),
             act(),
         )
         self.fc = nn.Sequential(

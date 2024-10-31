@@ -1,6 +1,6 @@
 from utils import *
 
-dataset = 'urbansound'
+dataset = 'audio_mnist'
 export = True
 
 if __name__ == "__main__":

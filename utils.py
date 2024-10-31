@@ -72,7 +72,7 @@ def gen_spectgrams_mnist(audio_data, padding_length, n_fft=128):
         y_trimmed, _ = librosa.effects.trim(audio[0], ref=np.mean , top_db=10)
         padded_y = pad_segment(y_trimmed, padding_length)
         spec = stft(padded_y, frame_size=n_fft, overlap=n_fft//2)
-        epsilon = 1e-3
+        epsilon = 1e-4
         spec_db = np.array(20 * np.log10(np.abs(spec) + epsilon))
         spects.append((spec_db, audio[1]))
     return spects
@@ -82,7 +82,7 @@ def gen_spectgrams_urban(audio_data, n_fft=128):
     for audio, sr, file in audio_data:
         padded_y = pad_segment(audio, 192000)
         spec = stft(padded_y, frame_size=n_fft, overlap=n_fft//2)
-        epsilon = 1e-3
+        epsilon = 1e-4
         spec_db = np.array(20 * np.log10(np.abs(spec) + epsilon))
         spects.append((spec_db, sr, file))
     return spects
