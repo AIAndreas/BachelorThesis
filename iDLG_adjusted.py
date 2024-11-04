@@ -7,6 +7,7 @@ import torch.nn as nn
 from torchvision import transforms
 from utils_model import compute_global_min_max, MinMaxNormalize, Dataset_from_Spectrogram, export_data, audio_mnist_dataset, LeNet_mnist, LeNet_urban
 
+torch.manual_seed(0)
 
 def weights_init(m):
     try:
@@ -21,7 +22,7 @@ def weights_init(m):
         print('warning: failed in weights_init for %s.bias' % m._get_name())
 
 def main():
-    dataset = 'audio_mnist'
+    dataset = 'urbansound'
     with_plots = False
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
@@ -30,7 +31,7 @@ def main():
     lr = 1
     num_dummy = 1
     Iteration = 300
-    num_exp = 20
+    num_exp = 1000
 
     use_cuda = torch.cuda.is_available()
     # device = 'cuda' if use_cuda else 'cpu'
@@ -50,11 +51,9 @@ def main():
     ''' load data '''
     if dataset == 'audio_mnist':
         shape_img = (129, 49)
-        # shape_img = (257, 24)
         num_classes = 10
         channel = 1
         hidden = 5148
-        # hidden = 4680
         data_path = os.path.join(root_path, 'data/audioMNIST/data_spec')
         images_all, labels_all, file_names = audio_mnist_dataset(data_path, shape_img)
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int)) # Load Dataset
