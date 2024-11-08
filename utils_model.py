@@ -10,16 +10,16 @@ class LeNet_mnist(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 65, 25]),
-            # nn.LayerNorm([12, 129, 12]),
+            # nn.LayerNorm([12, 257, 46]), # n_fft = 1024
+            nn.LayerNorm([12, 129, 93]), # n_fft = 512
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
-            nn.LayerNorm([12, 33, 13]),
-            # nn.LayerNorm([12, 65, 6]),
+            # nn.LayerNorm([12, 129, 23]), # n_fft = 1024
+            nn.LayerNorm([12, 65, 47]), # n_fft = 512
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
-            nn.LayerNorm([12, 33, 13]),
-            # nn.LayerNorm([12, 65, 6]),
+            # nn.LayerNorm([12, 129, 23]), # n_fft = 1024
+            nn.LayerNorm([12, 65, 47]), # n_fft = 512
             act(),
         )
         self.fc = nn.Sequential(
