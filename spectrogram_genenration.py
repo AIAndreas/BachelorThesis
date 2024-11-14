@@ -1,12 +1,12 @@
 from utils import *
 
-dataset = 'urbansound'
+dataset = 'audio_mnist'
 export = True
 
 if __name__ == "__main__":
     if dataset == 'audio_mnist':
         audio_data = load_data('data/mnist')
-        specs = gen_spectgrams(audio_data, max_signal_length=47998, n_fft=512) # 6457 is the length of the longest audio file after trimming
+        specs = gen_spectgrams(audio_data, max_signal_length=47998, n_fft=1024) # 6457 is the length of the longest audio file after trimming
         
         if export:
             output_folder = "data/mnist/data_spec"
@@ -22,7 +22,8 @@ if __name__ == "__main__":
                 i += 1
     if dataset == 'urbansound':
         audio_data = load_data('data/audio/')
-        specs = gen_spectgrams(audio_data, max_signal_length=192000, n_fft=1024) 
+        audio_data = [data for data in audio_data if len(data[0]) in [176400, 192000]]
+        specs = gen_spectgrams(audio_data, max_signal_length=192000, n_fft=2048) 
         
         if export:
             output_folder = "data/audio/data_spec"

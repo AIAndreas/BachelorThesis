@@ -173,13 +173,14 @@ def main():
 
 
             # compute original gradient
+            
             print(gt_data.shape, gt_label.shape)
             out = net(gt_data)
             print(out.shape)
             y = criterion(out, gt_label)
             dy_dx = torch.autograd.grad(y, net.parameters())
             original_dy_dx = list((_.detach().clone() for _ in dy_dx))
-
+            print(len(original_dy_dx))
             # generate dummy data and label
             dummy_data = torch.randn(gt_data.size()).to(device).requires_grad_(True)
             dummy_label = torch.randn((gt_data.shape[0], num_classes)).to(device).requires_grad_(True)

@@ -22,7 +22,7 @@ def weights_init(m):
         print('warning: failed in weights_init for %s.bias' % m._get_name())
 
 def main():
-    dataset = 'audio_mnist'
+    dataset = 'urbansound' # 'audio_mnist' or 'urbansound'
     with_plots = False
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
@@ -50,12 +50,14 @@ def main():
 
     ''' load data '''
     if dataset == 'audio_mnist':
-        # shape_img = (513, 92) # n_fft=1024
-        shape_img = (257, 186)
+        # shape_img = (1025, 45) # n_fft=2048
+        shape_img = (513, 92) # n_fft=1024
+        # shape_img = (257, 186) # n_fft=512
         num_classes = 10
         channel = 1
-        # hidden = 35604 # n_fft=1024
-        hidden = 36660
+        # hidden = 37008 # n_fft=2048
+        hidden = 35604 # n_fft=1024
+        # hidden = 36660 # n_fft=512
         data_path = os.path.join(root_path, 'data/mnist/data_spec')
         images_all, labels_all, file_names = audio_mnist_dataset(data_path, shape_img)
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int)) # Load Dataset
@@ -65,10 +67,14 @@ def main():
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
     elif dataset == 'urbansound':
-        shape_img = (1025, 186)
+        # shape_img = (1025, 186) # n_fft=2048
+        # shape_img = (513, 374) # n_fft=1024
+        shape_img = (257, 749) # n_fft=512
         num_classes = 10
         channel = 1
-        hidden = 144948
+        # hidden = 144948 # n_fft=2048
+        # hidden = 145512 # n_fft=1024
+        hidden = 146640 # n_fft=512
         data_path = os.path.join(root_path, 'data/audio/data_spec')
         images_all, labels_all, file_names = audio_mnist_dataset(data_path, shape_img)
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
