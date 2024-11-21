@@ -42,19 +42,19 @@ class LeNet_urban(nn.Module):
         act = nn.Sigmoid
         self.body = nn.Sequential(
             nn.Conv2d(channel, 12, kernel_size=5, padding=5 // 2, stride=2),
-            # nn.LayerNorm([12,513,93]), # n_fft = 2048   
+            nn.LayerNorm([12,513,93]), # n_fft = 2048   
             # nn.LayerNorm([12,257,187]), # n_fft = 1024 
-            nn.LayerNorm([12,129,375]), # n_fft = 512               
+            # nn.LayerNorm([12,129,375]), # n_fft = 512               
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=2),
-            # nn.LayerNorm([12,257,47]), # n_fft = 2048
+            nn.LayerNorm([12,257,47]), # n_fft = 2048
             #  nn.LayerNorm([12,129,94]), # n_fft = 1024 
-            nn.LayerNorm([12,65,188]), # n_fft = 512     
+            # nn.LayerNorm([12,65,188]), # n_fft = 512     
             act(),
             nn.Conv2d(12, 12, kernel_size=5, padding=5 // 2, stride=1),
-            # nn.LayerNorm([12,257,47]), # n_fft = 2048
+            nn.LayerNorm([12,257,47]), # n_fft = 2048
             # nn.LayerNorm([12,129,94]), # n_fft = 1024 
-            nn.LayerNorm([12,65,188]), # n_fft = 512     
+            # nn.LayerNorm([12,65,188]), # n_fft = 512     
             act(),
         )
         self.fc = nn.Sequential(
@@ -68,7 +68,7 @@ class LeNet_urban(nn.Module):
         return out  
 
 
-def compute_mean_std(dataset):
+def compute_mean_std(dataset): # provided with generative AI
     loader = DataLoader(dataset, batch_size=1, shuffle=False)
     mean = 0.0
     std = 0.0
@@ -98,7 +98,7 @@ def compute_mean_std(dataset):
     # std /= nb_samples
     return mean, std
 
-def compute_global_min_max(dataset, batch_size=64, num_workers=4):
+def compute_global_min_max(dataset, batch_size=64, num_workers=4): # provided with generative AI
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
     global_min = float('inf')
     global_max = float('-inf')

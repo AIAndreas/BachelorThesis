@@ -23,7 +23,7 @@ def weights_init(m):
 
 def main():
     dataset = 'urbansound' # 'audio_mnist' or 'urbansound'
-    with_plots = False
+    with_plots = False # plot each iteration of the generated spectrogram
     root_path = os.getcwd()
     data_path = os.path.join(root_path, 'data').replace('\\', '/')
     save_path = os.path.join(root_path, 'results/iDLG_%s'%dataset).replace('\\', '/')
@@ -33,8 +33,6 @@ def main():
     Iteration = 300
     num_exp = 1000
 
-    use_cuda = torch.cuda.is_available()
-    # device = 'cuda' if use_cuda else 'cpu'
     device = 'cpu'
 
     print(dataset, 'root_path:', root_path)
@@ -58,27 +56,43 @@ def main():
         # hidden = 37008 # n_fft=2048
         hidden = 35604 # n_fft=1024
         # hidden = 36660 # n_fft=512
+
+        # load data set
         data_path = os.path.join(root_path, 'data/mnist/data_spec')
         images_all, labels_all, file_names = audio_mnist_dataset(data_path, shape_img)
+
+        # define as dataset object
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int)) # Load Dataset
+
+        # compute global min and max
         global_min, global_max = compute_global_min_max(dst) # Find min/max
+
+        # define transformation and apply normalization
         normalizer = MinMaxNormalize(global_min, global_max) # Normalize dataset
         transform = transforms.Compose([normalizer])
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
 
     elif dataset == 'urbansound':
-        # shape_img = (1025, 186) # n_fft=2048
+        shape_img = (1025, 186) # n_fft=2048
         # shape_img = (513, 374) # n_fft=1024
-        shape_img = (257, 749) # n_fft=512
+        # shape_img = (257, 749) # n_fft=512
         num_classes = 10
         channel = 1
-        # hidden = 144948 # n_fft=2048
+        hidden = 144948 # n_fft=2048
         # hidden = 145512 # n_fft=1024
-        hidden = 146640 # n_fft=512
+        # hidden = 146640 # n_fft=512
+
+        # load data set
         data_path = os.path.join(root_path, 'data/audio/data_spec')
         images_all, labels_all, file_names = audio_mnist_dataset(data_path, shape_img)
+
+        # define as dataset object
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int))
+
+        # compute global min and max
         global_min, global_max = compute_global_min_max(dst)
+
+        # define transformation and apply normalization
         normalizer = MinMaxNormalize(global_min, global_max)
         transform = transforms.Compose([normalizer])
         dst = Dataset_from_Spectrogram(images_all, np.asarray(labels_all, dtype=int), transform=transform)
@@ -87,7 +101,7 @@ def main():
         exit('unknown dataset')
 
 
-
+    np.random.seed(0) # set seed for reproducibility
 
     ''' train DLG and iDLG '''
     for idx_net in range(num_exp):
@@ -100,6 +114,7 @@ def main():
 
         print('running %d|%d experiment'%(idx_net, num_exp))
         net = net.to(device)
+        
         idx_shuffle = np.random.permutation(len(dst))
 
         for method in ['iDLG']:
@@ -195,7 +210,7 @@ def main():
                         history_iters.append(iters)
                     break
             
-                if with_plots:
+                if with_plots: # if true save plots
                     for imidx in range(num_dummy):
                             plt.figure(figsize=(12, 8))
                             plt.subplot(3, 10, 1)
@@ -220,12 +235,13 @@ def main():
             label_iDLG = label_pred.item()
             mse_iDLG = mses
             original_file_name = file_names[imidx_list[imidx]] 
-            #Extract spectrogram from dummy data and save it
+
+            #Extract spectrogram from dummy data, reverse normalization, and save it
             if dataset == 'audio_mnist':
-                save_path = "results_mat/iDLG_audio_mnist"
+                save_path = "results_mat/iDLG_audio_mnist1024" # write suffix according to the dataset
                 export_data(normalizer.reverse(dummy_data.detach().cpu().numpy()),f'{save_path}/{original_file_name}')
             if dataset == 'urbansound':
-                save_path = "results_mat/iDLG_urbansound"
+                save_path = "results_mat/iDLG_urbansound2048" # 
                 export_data(normalizer.reverse(dummy_data.detach().cpu().numpy()),f'{save_path}/{original_file_name}')
 
 
