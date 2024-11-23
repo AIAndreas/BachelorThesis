@@ -7,7 +7,7 @@ This is the repository that has been used for this bachelor thesis, all relevant
 * utils_model.py are functions utilized in the main algorithm including network architecture, normalization, data loader, etc.
 * spectrogram_generation is a simple script that generates a spectrogram for the dataset specified.
 * griffin_lim.py is the modified fast griffin-lim algorithm found at: https://github.com/rbarghou/pygriffinlim.
-* results.py is the reconstruction of waveforms from produced spectrogram matrices.
+* results.ipynb is the reconstruction of waveforms from produced spectrogram matrices.
 * computation_results is a folder comprised of scripts used for the baseline, statistical tests, some plots, and results.
 
 *Note folder locations etc. should be created, as the creation of correct folders is not included in the code.* 
